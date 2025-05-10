@@ -1,0 +1,65 @@
+:root {
+  --primary: #2e86ab; /* Professional blue */
+  --secondary: #f6ae2d; /* Friendly yellow */
+  --dark: #333; /* Text color */
+  --light: #f7f9fc; /* Background */
+}
+
+/* ===== GLOBAL RESETS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== NAVBAR STYLES ===== */
+.navbar {
+  background-color: var(--primary); /* Uses our blue */
+  padding: 1rem 0; /* Spacing inside navbar */
+  position: fixed; /* Sticks to top of page */
+  width: 100%;
+  top: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Navigation Links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem; /* Spacing between links */
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Hamburger Menu (mobile-only - hidden on desktop) */
+.hamburger {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness (will activate later) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+}
