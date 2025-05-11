@@ -296,7 +296,15 @@ body {
   z-index: -1;
   animation: float 15s infinite ease-in-out;
 }
-
+.hero {
+  padding: 8rem 0 4rem;
+  background: linear-gradient(
+    135deg,
+    var(--light) 0%,
+    rgba(242, 250, 255, 0.9) 100%
+  );
+  position: relative; /* Needed for Option 2 */
+}
 @keyframes float {
   0%,
   100% {
@@ -324,5 +332,71 @@ body {
 
   .hero h1 {
     font-size: 2rem;
+  }
+}
+
+/* ===== ABOUT ME SECTION ===== */
+.about {
+  padding: 5rem 0;
+  background-color: var(--white);
+}
+
+.about-grid {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-photo {
+  flex: 1;
+  text-align: center;
+}
+
+.about-photo img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--primary-dark);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.about-list {
+  margin: 1.5rem 0;
+  list-style: none;
+}
+
+.about-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.about-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;
   }
 }
