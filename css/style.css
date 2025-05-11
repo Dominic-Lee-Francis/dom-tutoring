@@ -588,3 +588,99 @@ body {
     transition: transform 0.3s ease; /* For potential scaling */
   }
 }
+
+/* ===== SERVICES ACCORDION ===== */
+.services-accordion {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  background: var(--light);
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.accordion-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+}
+
+.accordion-header h3 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.service-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.accordion-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  transition: all 0.3s ease-out;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content ul {
+  list-style: none;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.accordion-content li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-content li::before {
+  content: "•";
+  color: var(--secondary);
+  position: absolute;
+  left: -1.2rem;
+  font-weight: bold;
+}
+
+.price {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-dark);
+  font-weight: 600;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(46, 134, 171, 0.3);
+}

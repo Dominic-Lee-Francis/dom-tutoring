@@ -22,3 +22,21 @@ document.querySelectorAll(".nav-link, .mobile-nav-link").forEach((link) => {
     link.classList.add("active");
   }
 });
+
+// Accordion Functionality
+document.querySelectorAll(".accordion-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const item = header.parentElement;
+    const isActive = item.classList.contains("active");
+
+    // Close all items first
+    document.querySelectorAll(".accordion-item").forEach((el) => {
+      el.classList.remove("active");
+    });
+
+    // Open clicked item if wasn't active
+    if (!isActive) {
+      item.classList.add("active");
+    }
+  });
+});
