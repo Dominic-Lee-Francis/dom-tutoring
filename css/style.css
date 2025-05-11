@@ -254,7 +254,58 @@ body {
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
+/* Mission Statement Styling */
+.mission-statement {
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  font-style: italic;
+}
 
+.accent-line {
+  position: relative;
+}
+
+.accent-line::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 3px;
+  background-color: var(--secondary);
+}
+
+/* Adjust existing hero-subtext */
+.hero-subtext {
+  font-size: 1.2rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero-blob {
+  position: absolute;
+  top: 0;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  z-index: -1;
+  animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .hero .container {
