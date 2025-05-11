@@ -372,12 +372,16 @@ body {
   .about-grid {
     flex-direction: column;
   }
-  .about-photo,
+
   .about-text {
-    order: initial; /* Reset order for mobile */
+    order: 1; /* Text appears first on mobile */
+  }
+
+  .about-photo {
+    order: 2; /* Photo appears second on mobile */
+    margin-top: -1rem; /* Reduce gap if needed */
   }
 }
-
 .about-photo img {
   max-width: 100%;
   border-radius: 10px;
