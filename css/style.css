@@ -199,6 +199,7 @@ body {
 .hero {
   padding: 8rem 0 4rem; /* Accounts for fixed navbar */
   background-color: var(--light);
+  padding-top: calc(6rem + 60px); /* 60px = navbar height */
 }
 
 .hero .container {
@@ -316,8 +317,14 @@ body {
 }
 /* Mobile responsiveness */
 @media (max-width: 768px) {
+  .hero {
+    padding: 5rem 0 2rem;
+    padding-top: calc(5rem + 60px);
+    padding-bottom: 2rem;
+  }
+
   .hero .container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .hero-content {
@@ -327,10 +334,11 @@ body {
 
   .hero-image {
     order: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .hero h1 {
+    margin-top: 1rem;
     font-size: 2rem;
   }
 }
@@ -344,16 +352,30 @@ body {
 .about-grid {
   display: flex;
   gap: 3rem;
-  align-items: center;
+  align-items: center; /* Vertically centers photo and text */
+}
+
+/* Photo now appears first in HTML, but for desktop it's on the left */
+.about-photo {
+  order: 1; /* Left side */
+  flex: 1;
+  text-align: center;
 }
 
 .about-text {
+  order: 2; /* Right side */
   flex: 1;
 }
 
-.about-photo {
-  flex: 1;
-  text-align: center;
+/* Mobile: Stack photo above text */
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;
+  }
+  .about-photo,
+  .about-text {
+    order: initial; /* Reset order for mobile */
+  }
 }
 
 .about-photo img {
@@ -394,9 +416,38 @@ body {
   font-weight: bold;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .about-grid {
-    flex-direction: column;
-  }
+/* Qualifications Section */
+.qualifications-section {
+  padding: 4rem 0;
+  background-color: var(--light);
+}
+
+.qualifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.qualification-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.qualification-card:hover {
+  transform: translateY(-5px);
+}
+
+.qualification-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.qualification-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
