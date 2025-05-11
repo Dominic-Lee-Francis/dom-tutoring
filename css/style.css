@@ -420,19 +420,37 @@ body {
   font-weight: bold;
 }
 
-/* Qualifications Section */
+/* ===== QUALIFICATIONS SECTION ===== */
 .qualifications-section {
   padding: 4rem 0;
   background-color: var(--light);
 }
 
-.qualifications-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+/* Container for proper alignment */
+.qualifications-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
 }
 
+/* Header styling */
+.qualifications-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%; /* Takes full width */
+  color: var(--primary);
+}
+
+/* Horizontal cards container */
+.qualifications-grid {
+  display: flex; /* Changed from grid to flex */
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap; /* Allows wrapping if needed */
+}
+
+/* Card styling (unchanged) */
 .qualification-card {
   background: var(--white);
   padding: 2rem;
@@ -440,18 +458,20 @@ body {
   text-align: center;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: var(--transition);
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
 }
 
-.qualification-card:hover {
-  transform: translateY(-5px);
-}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .qualifications-grid {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.qualification-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.qualification-card h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
+  .qualification-card {
+    width: 100%;
+    max-width: 350px;
+  }
 }
