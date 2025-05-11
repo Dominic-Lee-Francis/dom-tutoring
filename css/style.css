@@ -1,7 +1,7 @@
 /* Debugging */
-/* * {
+* {
   outline: 1px solid red;
-} */
+}
 
 /* ===== GLOBAL VARIABLES ===== */
 :root {
@@ -11,7 +11,25 @@
   --white: #ffffff;
   --black: #333333;
   --transition: all 0.3s ease-out;
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  --shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.8);
 }
+
+/* Ensure interactive elements are tappable */
+.nav-links a,
+.cta-button,
+.qualification-card {
+  min-height: 44px; /* Apple's recommended minimum */
+}
+
+/* Prevent text overflow */
+h1,
+h2,
+h3,
+p {
+  word-break: break-word;
+}
+
 /* ===== FULL-WIDTH NAVBAR FIX ===== */
 /* Remove default body margin/padding */
 body {
@@ -195,6 +213,22 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  /* Adjust navbar height and padding */
+  .navbar {
+    padding: 0.8rem 0;
+  }
+
+  .logo {
+    font-size: 1.1rem; /* Slightly smaller logo */
+  }
+
+  /* Ensure hamburger icon is properly spaced */
+  .hamburger {
+    padding: 0.3rem;
+  }
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
   padding: 8rem 0 4rem; /* Accounts for fixed navbar */
@@ -304,7 +338,7 @@ body {
     var(--light) 0%,
     rgba(242, 250, 255, 0.9) 100%
   );
-  position: relative; /* Needed for Option 2 */
+  position: relative;
 }
 @keyframes float {
   0%,
@@ -456,14 +490,57 @@ body {
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   transition: var(--transition);
   flex: 1;
   min-width: 250px;
   max-width: 300px;
 }
 
-/* Mobile responsiveness */
+/* 2. Card Entry Animations */
+.qualification-card {
+  /* Initial hidden state */
+  opacity: 0;
+  transform: translateY(30px);
+  /* Animation will override these */
+  animation: cardEntrance 0.6s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.qualification-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.qualification-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.qualification-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+@keyframes cardEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 3. Enhanced Hover Effects */
+.qualification-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+/* 4. Smooth Icon Animation */
+.qualification-icon {
+  transition: var(--transition);
+}
+
+.qualification-card:hover .qualification-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Mobile responsiveness
 @media (max-width: 768px) {
   .qualifications-grid {
     flex-direction: column;
@@ -473,5 +550,41 @@ body {
   .qualification-card {
     width: 100%;
     max-width: 350px;
+  }
+} */
+
+@media (max-width: 375px) {
+  /* 1. Reset section padding */
+  .qualifications-section {
+    padding: 2rem 0.5rem; /* Reduced padding */
+  }
+
+  /* 2. Force grid to single column */
+  .qualifications-grid {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin: 0;
+    padding: 0 0.5rem; /* Add slight side padding */
+  }
+
+  /* 3. Card sizing */
+  .qualification-card {
+    width: calc(100% - 1rem) !important; /* Account for padding */
+    min-width: unset !important;
+    max-width: unset !important;
+    margin: 0 auto;
+    box-sizing: border-box; /* Include padding in width */
+  }
+
+  /* 4. Prevent text overflow */
+  .qualification-card p {
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .qualification-card {
+    transition: transform 0.3s ease; /* For potential scaling */
   }
 }
