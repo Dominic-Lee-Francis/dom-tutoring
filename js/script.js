@@ -23,20 +23,28 @@ document.querySelectorAll(".nav-link, .mobile-nav-link").forEach((link) => {
   }
 });
 
-// Accordion Functionality
+// Accordion functionality
 document.querySelectorAll(".accordion-header").forEach((header) => {
-  header.addEventListener("click", () => {
+  header.addEventListener("click", (e) => {
     const item = header.parentElement;
-    const isActive = item.classList.contains("active");
+    const wasActive = item.classList.contains("active");
 
-    // Close all items first
+    // Close all items
     document.querySelectorAll(".accordion-item").forEach((el) => {
       el.classList.remove("active");
     });
 
-    // Open clicked item if wasn't active
-    if (!isActive) {
+    // Open clicked item if it wasn't active
+    if (!wasActive) {
       item.classList.add("active");
+
+      // Smooth scroll to ensure visibility
+      setTimeout(() => {
+        item.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
+      }, 300);
     }
   });
 });
