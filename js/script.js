@@ -48,3 +48,6 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
     }
   });
 });
+
+// Auto-update copyright year
+document.getElementById("current-year").textContent = new Date().getFullYear();
