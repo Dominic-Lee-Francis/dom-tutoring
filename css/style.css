@@ -924,7 +924,25 @@ body {
 .site-footer {
   background: var(--primary-dark);
   color: white;
-  padding: 3rem 0 1rem;
+  padding: 3rem 0 0; /* Changed from 1rem to 0 for legal section */
+  position: relative;
+  min-height: 100px; /* Ensures footer has minimum height */
+  width: 100vw; /* Ensure full viewport width */
+  margin-left: calc(-50vw + 50%); /* Counteracts container padding */
+  width: 100vw; /* Viewport width */
+  left: 0;
+}
+
+.site-footer .container {
+  max-width: 1200px; /* Match your site's max width */
+  margin: 0 auto;
+  padding: 0 2rem; /* Side padding instead of container margin */
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.footer-main-content {
+  padding-bottom: 1.5rem; /* Space before legal section */
 }
 
 .footer-content {
@@ -1006,9 +1024,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.5rem;
+  padding: 1.5rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.85rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .copyright {
@@ -1036,6 +1059,7 @@ body {
   }
 
   .footer-legal {
+    position: static; /* Reverts to normal flow on mobile */
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
@@ -1045,6 +1069,17 @@ body {
   .footer-contact h4::after {
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .site-footer {
+    margin-left: 0; /* Reset for mobile */
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .site-footer .container {
+    padding: 0 1.5rem; /* Consistent side padding */
+    padding-bottom: 20px; /* Reduced for mobile */
   }
 }
 
