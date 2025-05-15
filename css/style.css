@@ -927,18 +927,16 @@ body {
   padding: 3rem 0 0; /* Changed from 1rem to 0 for legal section */
   position: relative;
   min-height: 100px; /* Ensures footer has minimum height */
-  width: 100vw; /* Ensure full viewport width */
-  margin-left: calc(-50vw + 50%); /* Counteracts container padding */
-  width: 100vw; /* Viewport width */
-  left: 0;
+  width: 100%;
+  overflow: hidden; /* Prevents horizontal scroll */
 }
 
 .site-footer .container {
-  max-width: 1200px; /* Match your site's max width */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem; /* Side padding instead of container margin */
-  position: relative;
+  padding: 0 2rem;
   padding-bottom: 60px;
+  position: relative;
 }
 
 .footer-main-content {
@@ -1020,18 +1018,23 @@ body {
 }
 
 /* Legal Section */
+/* Legal section with max-width constraint */
 .footer-legal {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: 1.5rem 2rem; /* Match container padding */
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.85rem;
-  width: 100%;
+  /* New positioning */
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  /* Constrain width to container */
+  max-width: 1200px;
+  box-sizing: border-box;
 }
 
 .copyright {
@@ -1059,10 +1062,11 @@ body {
   }
 
   .footer-legal {
-    position: static; /* Reverts to normal flow on mobile */
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    left: auto;
   }
 
   .footer-nav h4::after,
