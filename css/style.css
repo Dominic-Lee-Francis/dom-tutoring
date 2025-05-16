@@ -1452,6 +1452,33 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* ===== PHOTO ANIMATION ===== */
+.photo-load img {
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: scale(0.98); /* Slight initial reduction */
+}
+
+.photo-load:hover img {
+  transform: scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Enhanced depth */
+}
+
+/* Optional: Fade-in on load */
+@keyframes fadeIn {
+  from {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.photo-load img {
+  animation: fadeIn 1s ease-out forwards;
+}
+
 .why-teach-quote {
   font-style: italic;
   border-left: 3px solid var(--secondary);
