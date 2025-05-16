@@ -11,6 +11,7 @@
   --primary: #2e86ab;
   --primary-dark: #1a5f7a;
   --secondary: #f6ae2d;
+  --secondary-dark: #e6a425; /* Slightly darker yellow */
   --white: #ffffff;
   --black: #333333;
   --transition: all 0.3s ease-out;
@@ -1153,25 +1154,142 @@ body {
   font-size: 1.5rem;
 }
 
-.philosophy {
+/* ===== PHILOSOPHY SECTION ===== */
+/* ===== PHILOSOPHY SECTION ===== */
+/* ===== TEACHING METHODOLOGY ===== */
+
+/* Temporary debug borders */
+/* .method-header {
+  border: 2px solid red;
+}
+.method-cards {
+  border: 2px solid blue;
+}
+.container {
+  border: 2px dashed green;
+} */
+
+.teaching-method {
   background: var(--light);
   padding: 4rem 0;
+  /* Ensure proper stacking */
+  display: flex;
+  flex-direction: column;
 }
 
-.philosophy-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* .containerTeachingMethodology {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 2rem; */
+/* Critical for layout */
+/* display: flex; */
+/* flex-direction: column; */
+/* } */
+
+.method-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  width: 100%; /* Force full width */
+  order: 1; /* Explicitly place first */
+}
+
+.method-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
+  width: 100%;
+  order: 2; /* Explicitly place second */
 }
 
-.philosophy-card {
+.method-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.method-header h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.method-header .subtitle {
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+}
+
+.method-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.method-card {
   background: white;
+  width: 250px;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
+.method-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.method-card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.method-card p {
+  color: var(--black);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .method-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .method-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .method-header h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .method-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .method-header {
+    margin-bottom: 2rem;
+  }
+}
 /* ===== METHODOLOGY FLOWCHART ===== */
 .methodology {
   padding: 4rem 0;
@@ -1243,7 +1361,7 @@ body {
 }
 
 .flowcard p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--black);
 }
 
@@ -1306,5 +1424,115 @@ body {
 
   .about-hero h1 {
     font-size: 2rem;
+  }
+}
+
+/* WHY I TEACH - Specific Styles */
+/* WHY I TEACH - Specific Styles */
+/* WHY I TEACH - Specific Styles */
+.about-why-teach {
+  background: var(--light);
+  padding: 5rem 0;
+}
+
+.why-teach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.why-teach-content {
+  max-width: 600px;
+}
+
+.why-teach-photo img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.why-teach-quote {
+  font-style: italic;
+  border-left: 3px solid var(--secondary);
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.photo-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--primary-dark);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .why-teach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-teach-photo {
+    order: -1; /* Photo above text on mobile */
+  }
+}
+/* ===== WHY TEACH CTA ===== */
+.why-teach-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--secondary);
+  color: var(--black);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(246, 174, 45, 0.3);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--primary-dark);
+  border-color: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(246, 174, 45, 0.4);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(246, 174, 45, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(246, 174, 45, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(246, 174, 45, 0);
+  }
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: var(--secondary-dark); /* Add to :root */
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .cta-button {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.95rem;
+  }
+
+  .cta-button:hover {
+    animation: none; /* Disable on mobile if preferred */
+    transform: translateY(-2px);
   }
 }
