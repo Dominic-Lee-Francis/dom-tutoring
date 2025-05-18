@@ -54,18 +54,31 @@ document.getElementById("current-year").textContent = new Date().getFullYear();
 
 // FAQ Accordion Functionality
 document.querySelectorAll(".faq-question").forEach((button) => {
-  button.addEventListener("click", () => {
-    const faqItem = button.parentElement;
-    const isOpen = faqItem.classList.contains("active");
-
-    // Close all items first
-    document.querySelectorAll(".faq-item").forEach((item) => {
-      item.classList.remove("active");
-    });
-
-    // Open current if it wasn't open
-    if (!isOpen) {
-      faqItem.classList.add("active");
+  button.addEventListener("click", toggleFaq);
+  button.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleFaq(e);
     }
   });
 });
+
+function toggleFaq(e) {
+  const button = e.currentTarget;
+  const faqItem = button.parentElement;
+  const isOpen = faqItem.classList.contains("active");
+
+  // Close all items first
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    if (item !== faqItem) {
+      item.classList.remove("active");
+      item
+        .querySelector(".faq-question")
+        .setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // Toggle current item
+  faqItem.classList.toggle("active");
+  button.setAttribute("aria-expanded", isOpen ? "false" : "true");
+}

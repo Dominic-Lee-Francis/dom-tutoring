@@ -1727,6 +1727,19 @@ body {
 }
 
 .faq-question {
+  /* Add these properties to your existing .faq-question */
+  appearance: none; /* Removes default system UI */
+  -webkit-appearance: none; /* For Safari */
+  background-image: none; /* Removes any default background images */
+}
+
+/* Specifically target any pseudo-elements that might be added by the browser */
+.faq-question::-webkit-details-marker,
+.faq-question::marker {
+  display: none !important;
+}
+
+.faq-question {
   width: 100%;
   padding: 1.2rem 1rem;
   text-align: left;
@@ -1741,6 +1754,17 @@ body {
   font-weight: 600;
   color: var(--primary-dark);
   transition: var(--transition);
+  transition: all 0.2s ease;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+.faq-item.active .faq-question {
+  font-weight: 600;
+  color: var(--primary-dark);
 }
 
 .faq-section .container {
@@ -1754,17 +1778,62 @@ body {
   color: var(--primary);
 }
 
+/* Replace .accordion-icon styles with: */
 .faq-question .accordion-icon {
-  font-size: 1.5rem;
-  color: var(--secondary);
-  transition: var(--transition);
+  display: inline-flex; /* Use flex instead of block */
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  position: relative;
+  transition: transform 0.3s ease;
+  /* Explicitly hide any content */
+  background: transparent !important;
+  color: transparent !important;
+}
+
+/* Ensure no other pseudo-elements exist */
+.faq-question .accordion-icon::before,
+.faq-question .accordion-icon::after,
+.faq-question .accordion-icon * {
+  all: unset; /* Reset any inherited styles */
+}
+
+/* Then reapply your custom icon styles */
+.faq-question .accordion-icon::before,
+.faq-question .accordion-icon::after {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.faq-question .accordion-icon::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.faq-question .accordion-icon::after {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.faq-item.active .faq-question .accordion-icon::after {
+  transform: translateX(-50%) rotate(90deg);
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.4s cubic-bezier(0.65, 0, 0.35, 1);
   padding: 0 1rem;
+  background-color: rgba(246, 174, 45, 0.05);
+  border-left: 3px solid var(--secondary);
 }
 
 .faq-answer p {
@@ -1774,16 +1843,17 @@ body {
 }
 
 /* ===== FAQ ACTIVE STATE ===== */
-.faq-item.active .faq-question {
+/* .faq-item.active .faq-question {
   color: var(--primary);
 }
 
 .faq-item.active .accordion-icon {
   transform: rotate(45deg);
-}
+} */
 
 .faq-item.active .faq-answer {
-  max-height: 300px; /* Adjust based on your longest answer */
+  max-height: 500px; /* Adjust based on your longest answer */
+  transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 /* ===== FAQ CTA ===== */
