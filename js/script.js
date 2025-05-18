@@ -51,3 +51,21 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
 
 // Auto-update copyright year
 document.getElementById("current-year").textContent = new Date().getFullYear();
+
+// FAQ Accordion Functionality
+document.querySelectorAll(".faq-question").forEach((button) => {
+  button.addEventListener("click", () => {
+    const faqItem = button.parentElement;
+    const isOpen = faqItem.classList.contains("active");
+
+    // Close all items first
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    // Open current if it wasn't open
+    if (!isOpen) {
+      faqItem.classList.add("active");
+    }
+  });
+});
