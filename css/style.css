@@ -1952,7 +1952,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 .contact-page-hero .contact-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1963,7 +1962,6 @@ body {
   align-items: center;
   gap: 3rem;
 }
-
 .contact-page-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -1972,7 +1970,6 @@ body {
   flex: 1;
   min-width: 300px;
 }
-
 .contact-subtitle {
   font-size: 1.2rem;
   opacity: 0.9;
@@ -1982,7 +1979,6 @@ body {
   position: relative;
   padding-left: 2rem;
 }
-
 .contact-subtitle::before {
   content: "";
   position: absolute;
@@ -1993,8 +1989,7 @@ body {
   width: 2px;
   background: rgba(255, 255, 255, 0.3);
 }
-
-/* Decorative elements (optional) */
+/* Decorative elements */
 .contact-page-hero::after {
   content: "";
   position: absolute;
@@ -2009,70 +2004,68 @@ body {
   );
   border-radius: 50%;
 }
-
-/* Mobile Responsiveness */
+.contact-page-hero::after {
+  content: "✉️";
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  opacity: 0.1;
+}
+/* ===== CONTACT PAGE HERO: RESPONSIVE ===== */
 @media (max-width: 992px) {
   .contact-page-hero .contact-container {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
   }
-
   .contact-subtitle {
     padding-left: 0;
   }
-
   .contact-subtitle::before {
     display: none;
   }
 }
-
 @media (max-width: 768px) {
   .contact-page-hero {
     padding: 5rem 0 3rem;
   }
-
   .contact-page-hero h1 {
     font-size: 2rem;
   }
-
   .contact-subtitle {
     font-size: 1.1rem;
   }
 }
-
 @media (max-width: 480px) {
   .contact-page-hero {
     padding: 4rem 0 2.5rem;
   }
-
   .contact-page-hero h1 {
     font-size: 1.7rem;
   }
-
   .contact-subtitle {
     font-size: 1rem;
   }
 }
+
 /* ===== CONTACT METHODS SECTION ===== */
 .contact-methods-section {
   padding: 4rem 0;
   background-color: white;
 }
-
 .contact-methods-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 .contact-methods-heading {
   color: var(--primary);
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 .contact-methods-intro {
   color: var(--black);
   text-align: center;
@@ -2080,14 +2073,12 @@ body {
   margin: 0 auto 2rem;
   line-height: 1.5;
 }
-
 .contact-methods-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
-
 .contact-method-card {
   background: #f9f9f9;
   border-radius: 10px;
@@ -2095,30 +2086,25 @@ body {
   transition: var(--transition);
   border: 1px solid #eee;
 }
-
 .contact-method-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(46, 134, 171, 0.1);
 }
-
 .contact-method-icon {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
-
 .contact-method-title {
   color: var(--primary);
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
-
 .contact-method-description {
   color: var(--black);
   margin-bottom: 1.5rem;
   line-height: 1.5;
 }
-
 .contact-method-link {
   display: inline-flex;
   align-items: center;
@@ -2127,87 +2113,71 @@ body {
   text-decoration: none;
   transition: var(--transition);
 }
-
 .link-arrow {
   margin-left: 0.5rem;
   transition: var(--transition);
 }
-
 .contact-method-link:hover {
   color: var(--primary);
 }
-
 .contact-method-link:hover .link-arrow {
   transform: translateX(3px);
 }
-
 /* Specific Card Styling */
 .whatsapp-card {
-  border-top: 3px solid #25d366; /* WhatsApp brand color */
+  border-top: 3px solid #25d366;
 }
-
 .email-card {
-  border-top: 3px solid #ea4335; /* Gmail red */
+  border-top: 3px solid #ea4335;
 }
-
 .phone-card {
-  border-top: 3px solid var(--primary); /* Your primary blue */
+  border-top: 3px solid var(--primary);
 }
 
-/* Mobile Responsiveness */
+/* ===== CONTACT METHODS: RESPONSIVE ===== */
 @media (max-width: 768px) {
   .contact-methods-section {
     padding: 3rem 0;
   }
-
   .contact-methods-heading {
     font-size: 1.7rem;
   }
-
   .contact-methods-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
   .contact-method-card {
     padding: 1.5rem;
   }
 }
-
 @media (max-width: 480px) {
   .contact-methods-heading {
     font-size: 1.5rem;
   }
-
   .contact-method-icon {
     font-size: 2rem;
   }
-
   .contact-method-title {
     font-size: 1.2rem;
   }
 }
 
-/* ===== Contact Locations ===== */
 /* ===== LOCATION SECTION ===== */
 .location-section {
   padding: 4rem 0;
   background-color: #f9f9f9;
 }
-
 .location-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 .location-heading {
   color: var(--primary);
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 .location-intro {
   color: var(--black);
   text-align: center;
@@ -2215,14 +2185,12 @@ body {
   margin: 0 auto 2rem;
   line-height: 1.5;
 }
-
 .location-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
-
 .location-card {
   background: white;
   border-radius: 10px;
@@ -2230,81 +2198,66 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   transition: var(--transition);
 }
-
 .location-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
 .location-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-
 .location-title {
   color: var(--primary);
   margin-top: 0;
   margin-bottom: 1.5rem;
   font-size: 1.4rem;
 }
-
 .location-details p {
   margin-bottom: 0.8rem;
   line-height: 1.5;
 }
-
 .location-list {
   padding-left: 1.2rem;
   margin-bottom: 1.5rem;
 }
-
 .location-list li {
   margin-bottom: 0.5rem;
 }
-
 .location-note {
   color: #666;
   font-style: italic;
 }
-
 /* Specific Card Styling */
 .home-visits-card {
   border-top: 3px solid var(--primary);
 }
-
 .online-card {
   border-top: 3px solid var(--secondary);
 }
 
-/* Mobile Responsiveness */
+/* ===== LOCATION SECTION: RESPONSIVE ===== */
 @media (max-width: 768px) {
   .location-section {
     padding: 3rem 0;
   }
-
   .location-heading {
     font-size: 1.7rem;
   }
-
   .location-cards {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
   .location-card {
     padding: 1.5rem;
   }
 }
-
 @media (max-width: 480px) {
   .location-heading {
     font-size: 1.5rem;
   }
-
   .location-icon {
     font-size: 2rem;
   }
-
   .location-title {
     font-size: 1.2rem;
   }
