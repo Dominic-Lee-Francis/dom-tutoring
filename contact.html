@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta
       name="description"
       content="Professional private tutor for students in Hong Kong. Personalized lessons in English by a Native English Speaker."
@@ -25,6 +28,8 @@
     <title>Dom's English & Coding Club HK | Contact</title>
   </head>
   <body>
+    <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <!-- NAVBAR -->
     <header class="navbar">
       <div class="container">
@@ -59,18 +64,209 @@
         </nav>
       </div>
     </header>
+    <main class="contact-page">
+      <!-- Contact Hero Section -->
+      <section class="contact-hero">
+        <div class="contact-hero-container">
+          <h1>Get In Touch</h1>
+          <p class="subtitle">
+            I'd love to discuss how I can help your child succeed
+          </p>
+        </div>
+      </section>
 
-    <!-- HERO SECTION (we'll add this next) -->
-    <main>
-      <!-- Content goes here -->
+      <!-- Contact Methods Section -->
+      <section class="contact-methods-section">
+        <div class="container">
+          <h2>Contact Methods</h2>
+          <div class="contact-methods-grid">
+            <!-- Phone -->
+            <div class="contact-method-card">
+              <div class="contact-icon">📱</div>
+              <h3>Phone Call</h3>
+              <p>Available 9AM-7PM, Mon-Sat</p>
+              <a href="tel:+85212345678" class="contact-link">+852 1234 5678</a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contact-method-card">
+              <div class="contact-icon">💬</div>
+              <h3>WhatsApp</h3>
+              <p>Fast response for quick inquiries</p>
+              <a
+                href="https://wa.me/85212345678"
+                class="contact-link"
+                target="_blank"
+                >Chat Now</a
+              >
+            </div>
+
+            <!-- Email -->
+            <div class="contact-method-card">
+              <div class="contact-icon">✉️</div>
+              <h3>Email</h3>
+              <p>For detailed questions</p>
+              <a href="mailto:hello@primarytutorhk.com" class="contact-link"
+                >hello@primarytutorhk.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="contact-form-section">
+        <div class="container">
+          <h2>Send a Message</h2>
+          <form class="tutor-contact-form">
+            <div class="form-group">
+              <label for="name">Parent's Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="student">Student's Grade</label>
+              <select id="student" name="student">
+                <option value="">Select grade level</option>
+                <option value="p1">Primary 1</option>
+                <option value="p2">Primary 2</option>
+                <option value="p3">Primary 3</option>
+                <option value="p4">Primary 4</option>
+                <option value="p5">Primary 5</option>
+                <option value="p6">Primary 6</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Location Section -->
+      <section class="location-section">
+        <div class="container">
+          <h2>Tutoring Locations</h2>
+          <div class="location-cards">
+            <div class="location-card">
+              <h3>🏠 Home Visits</h3>
+              <p>Available in these areas:</p>
+              <ul>
+                <li>Hong Kong Island</li>
+                <li>Kowloon</li>
+                <li>Selected New Territories areas</li>
+              </ul>
+            </div>
+            <div class="location-card">
+              <h3>🏫 Learning Centers</h3>
+              <p>Available at partner centers in:</p>
+              <ul>
+                <li>Causeway Bay</li>
+                <li>Mong Kok</li>
+                <li>Tsuen Wan</li>
+              </ul>
+            </div>
+            <div class="location-card">
+              <h3>💻 Online Sessions</h3>
+              <p>Available worldwide via:</p>
+              <ul>
+                <li>Zoom</li>
+                <li>Google Meet</li>
+                <li>Microsoft Teams</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- FOOTER (we'll add later) -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
-      <!-- Content goes here -->
+      <footer class="site-footer">
+        <div class="footer-main-content">
+          <div class="container">
+            <!-- Main Content - Horizontal Layout -->
+            <div class="footer-content">
+              <!-- Branding -->
+              <div class="footer-brand">
+                <h3 class="footer-title">Primary Tutor HK</h3>
+                <p class="footer-description">
+                  Building confidence through personalized education
+                </p>
+              </div>
+
+              <!-- Navigation -->
+              <nav class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#about">About</a></li>
+                </ul>
+              </nav>
+
+              <!-- Contact -->
+              <div class="footer-contact">
+                <h4>Reach Me</h4>
+                <ul class="footer-contact-list">
+                  <li>
+                    <a href="tel:+85212345678" class="footer-phone"
+                      >📞 +852 1234 5678</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://wa.me/85212345678" class="footer-whatsapp"
+                      >💬 WhatsApp</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:hello@primarytutorhk.com"
+                      class="footer-email"
+                      >✉️ Email</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Legal - Bottom Row -->
+          <div class="footer-legal">
+            <p class="copyright">
+              © <span id="current-year"></span> Primary Tutor HK
+            </p>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <span>•</span>
+              <a href="#">Terms</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </footer>
 
-    <!-- JavaScript (for mobile menu - we'll add later) -->
     <script src="js/script.js"></script>
   </body>
 </html>
