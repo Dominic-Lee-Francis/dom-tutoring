@@ -66,133 +66,124 @@
     </header>
     <main class="contact-page">
       <!-- Contact Hero Section -->
-      <section class="contact-hero">
-        <div class="contact-hero-container">
-          <h1>Get In Touch</h1>
-          <p class="subtitle">
-            I'd love to discuss how I can help your child succeed
-          </p>
+      <section class="contact-page-hero">
+        <div class="contact-container">
+          <h1>...</h1>
+          <p class="contact-subtitle">...</p>
         </div>
       </section>
 
       <!-- Contact Methods Section -->
+      <!-- Contact Methods Section -->
       <section class="contact-methods-section">
-        <div class="container">
-          <h2>Contact Methods</h2>
+        <div class="contact-methods-container">
+          <h2 class="contact-methods-heading">Contact Methods</h2>
+          <p class="contact-methods-intro">
+            Reach out through your preferred channel - I typically respond
+            within 24 hours
+          </p>
+
           <div class="contact-methods-grid">
-            <!-- Phone -->
-            <div class="contact-method-card">
-              <div class="contact-icon">📱</div>
-              <h3>Phone Call</h3>
-              <p>Available 9AM-7PM, Mon-Sat</p>
-              <a href="tel:+85212345678" class="contact-link">+852 1234 5678</a>
+            <!-- Phone Card -->
+            <div class="contact-method-card phone-card">
+              <div class="contact-method-icon">📱</div>
+              <h3 class="contact-method-title">Phone Call</h3>
+              <p class="contact-method-description">
+                Available 9AM-7PM, Mon-Sat for immediate discussions
+              </p>
+              <a href="tel:+85212345678" class="contact-method-link">
+                +852 1234 5678
+                <span class="link-arrow">→</span>
+              </a>
             </div>
 
-            <!-- WhatsApp -->
-            <div class="contact-method-card">
-              <div class="contact-icon">💬</div>
-              <h3>WhatsApp</h3>
-              <p>Fast response for quick inquiries</p>
+            <!-- WhatsApp Card -->
+            <div class="contact-method-card whatsapp-card">
+              <div class="contact-method-icon">💬</div>
+              <h3 class="contact-method-title">WhatsApp</h3>
+              <p class="contact-method-description">
+                Fast responses for quick questions - available 9AM-9PM
+              </p>
+
+              <div class="whatsapp-details">
+                <div class="whatsapp-number">
+                  <span class="whatsapp-label">Number:</span>
+                  <span class="number">+852 1234 5678</span>
+                </div>
+                <a
+                  href="https://wa.me/85212345678"
+                  class="contact-method-link"
+                  target="_blank"
+                >
+                  Start Chat
+                  <span class="link-arrow">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-method-card email-card">
+              <div class="contact-method-icon">✉️</div>
+              <h3 class="contact-method-title">Email</h3>
+              <p class="contact-method-description">
+                For detailed inquiries and documentation
+              </p>
               <a
-                href="https://wa.me/85212345678"
-                class="contact-link"
-                target="_blank"
-                >Chat Now</a
+                href="mailto:hello@primarytutorhk.com"
+                class="contact-method-link"
               >
-            </div>
-
-            <!-- Email -->
-            <div class="contact-method-card">
-              <div class="contact-icon">✉️</div>
-              <h3>Email</h3>
-              <p>For detailed questions</p>
-              <a href="mailto:hello@primarytutorhk.com" class="contact-link"
-                >hello@primarytutorhk.com</a
-              >
+                hello@primarytutorhk.com
+                <span class="link-arrow">→</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact Form Section -->
-      <section class="contact-form-section">
-        <div class="container">
-          <h2>Send a Message</h2>
-          <form class="tutor-contact-form">
-            <div class="form-group">
-              <label for="name">Parent's Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-
-            <div class="form-group">
-              <label for="student">Student's Grade</label>
-              <select id="student" name="student">
-                <option value="">Select grade level</option>
-                <option value="p1">Primary 1</option>
-                <option value="p2">Primary 2</option>
-                <option value="p3">Primary 3</option>
-                <option value="p4">Primary 4</option>
-                <option value="p5">Primary 5</option>
-                <option value="p6">Primary 6</option>
-              </select>
-            </div>
-
-            <div class="form-group full-width">
-              <label for="message">Your Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="submit-button">Send Message</button>
-          </form>
-        </div>
-      </section>
-
       <!-- Location Section -->
       <section class="location-section">
-        <div class="container">
-          <h2>Tutoring Locations</h2>
+        <div class="location-container">
+          <h2 class="location-heading">Tutoring Locations</h2>
+          <p class="location-intro">
+            Flexible teaching options to suit your family's needs
+          </p>
+
           <div class="location-cards">
-            <div class="location-card">
-              <h3>🏠 Home Visits</h3>
-              <p>Available in these areas:</p>
-              <ul>
-                <li>Hong Kong Island</li>
-                <li>Kowloon</li>
-                <li>Selected New Territories areas</li>
-              </ul>
+            <!-- Home Visits Card -->
+            <div class="location-card home-visits-card">
+              <div class="location-icon">🏠</div>
+              <h3 class="location-title">Home Visits</h3>
+              <div class="location-details">
+                <p>Available in these areas:</p>
+                <ul class="location-list">
+                  <li>Hong Kong Island</li>
+                  <li>Kowloon</li>
+                  <li>Selected New Territories areas</li>
+                </ul>
+                <p class="location-note">
+                  <small
+                    >Additional travel fee may apply for distant
+                    locations</small
+                  >
+                </p>
+              </div>
             </div>
-            <div class="location-card">
-              <h3>🏫 Learning Centers</h3>
-              <p>Available at partner centers in:</p>
-              <ul>
-                <li>Causeway Bay</li>
-                <li>Mong Kok</li>
-                <li>Tsuen Wan</li>
-              </ul>
-            </div>
-            <div class="location-card">
-              <h3>💻 Online Sessions</h3>
-              <p>Available worldwide via:</p>
-              <ul>
-                <li>Zoom</li>
-                <li>Google Meet</li>
-                <li>Microsoft Teams</li>
-              </ul>
+
+            <!-- Online Card -->
+            <div class="location-card online-card">
+              <div class="location-icon">💻</div>
+              <h3 class="location-title">Online Sessions</h3>
+              <div class="location-details">
+                <p>Conducted via:</p>
+                <ul class="location-list">
+                  <li>Zoom</li>
+                  <li>Google Meet</li>
+                  <li>Microsoft Teams</li>
+                </ul>
+                <p class="location-note">
+                  <small>Stable internet connection required</small>
+                </p>
+              </div>
             </div>
           </div>
         </div>
