@@ -1875,7 +1875,108 @@ body {
   }
 }
 
-/* CTA Section */
+/* ===== TEACHING METHODOLOGY ===== */
+
+/* --- Method Header Container --- */
+.method-header-container {
+  background-color: #f9f9f9;
+  padding: 2rem 0 1rem;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  font-size: 2rem;
+  word-break: keep-all; /* Prevent mid-word breaks */
+  overflow-wrap: break-word; /* Allow breaking only at appropriate points */
+  hyphens: auto; /* Enable hyphenation where needed */
+  padding: 0 1rem; /* Add side padding on mobile */
+}
+
+/* --- Method Header Stacking --- */
+.method-header-container .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.method-header-container h2 {
+  margin-bottom: 0.8rem;
+}
+
+/* --- Method Flow Container --- */
+.method-flow-container {
+  background-color: #f9f9f9;
+  padding: 0 0 3rem;
+}
+
+/* --- Teaching Method Section --- */
+.teaching-method {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+  padding: 0; /* Now handled by inner containers */
+}
+
+/* --- Methodology Flow --- */
+.methodology-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* --- Method Step --- */
+.method-step {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding-left: 30px;
+}
+
+.step-number {
+  background-color: var(--primary);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-top: 0;
+}
+
+.step-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  flex-grow: 1;
+}
+
+.step-content h3 {
+  color: var(--primary);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  margin: 0;
+  color: var(--black);
+}
+
+/* --- CTA Section --- */
 .services-cta {
   text-align: center;
   padding: 3rem 0;
@@ -1885,4 +1986,88 @@ body {
 
 .services-cta h2 {
   margin-bottom: 1.5rem;
+}
+
+/* ===== RESPONSIVENESS ===== */
+
+/* --- Tablet & Mobile --- */
+@media (max-width: 768px) {
+  .method-header-container {
+    padding: 1.5rem 0 0.5rem;
+  }
+
+  .method-header-container .container {
+    display: block;
+    text-align: left;
+    padding: 0 1rem;
+  }
+
+  .method-header-container h2 {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+
+  .section-intro {
+    text-align: left;
+    margin-top: 0;
+    padding-left: 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+  .method-flow-container {
+    padding-bottom: 2rem;
+  }
+
+  .teaching-method {
+    padding: 3rem 0;
+  }
+
+  .methodology-flow {
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .method-step {
+    gap: 1rem;
+    padding-left: 25px;
+  }
+
+  .step-number {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    left: -5px;
+  }
+
+  .step-content {
+    padding: 1.2rem;
+  }
+}
+
+/* --- Small Mobile Devices --- */
+@media (max-width: 480px) {
+  .method-header-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+  }
+
+  .method-step {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px;
+  }
+
+  .step-number {
+    position: absolute;
+    left: 0;
+  }
+
+  .methodology-flow::before {
+    left: 18px;
+  }
 }
