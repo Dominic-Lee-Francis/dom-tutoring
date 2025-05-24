@@ -657,6 +657,481 @@ body {
     flex: 1.2; /* Gives more space to text */
   }
 }
+
+/* ===== TEACHING METHODOLOGY PREVIEW ===== */
+.teaching-methodology-preview {
+  padding: 5rem 0;
+  background-color: #f8fafc;
+}
+
+.tm-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tm-main-title {
+  text-align: center;
+  color: var(--primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.tm-subtitle {
+  text-align: center;
+  color: var(--primary-dark);
+  font-size: 1.15rem;
+  margin-bottom: 3.5rem;
+}
+
+.tm-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tm-single-step {
+  display: flex;
+  gap: 1.8rem;
+  background: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(46, 134, 171, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  border-left: 4px solid var(--secondary);
+}
+
+.tm-single-step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(46, 134, 171, 0.12);
+}
+
+.tm-step-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 70px;
+}
+
+.tm-step-emoji {
+  font-size: 2rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.tm-single-step:hover .tm-step-emoji {
+  transform: scale(1.15);
+}
+
+.tm-step-digit {
+  background: var(--primary);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.tm-step-body {
+  flex: 1;
+}
+
+.tm-step-title {
+  color: var(--primary-dark);
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+}
+
+.tm-step-desc {
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.tm-cta-wrapper {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.tm-method-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.tm-method-link:hover {
+  color: var(--primary-dark);
+  border-bottom-color: var(--secondary);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (min-width: 768px) {
+  .tm-steps-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.2rem;
+  }
+
+  .tm-single-step {
+    flex-direction: column;
+    gap: 1.2rem;
+    min-height: 240px;
+  }
+
+  .tm-step-header {
+    flex-direction: row;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tm-steps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tm-single-step {
+    min-height: 280px;
+  }
+
+  .tm-main-title {
+    font-size: 2.4rem;
+  }
+}
+
+/* ===== TESTIMONIALS SECTION ===== */
+.testimonial-section {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.testimonial-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-main-title {
+  text-align: center;
+  color: var(--primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-subtitle {
+  text-align: center;
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+  margin-bottom: 3.5rem;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonial-single-card {
+  background: #f9f9f9;
+  padding: 2.5rem;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(46, 134, 171, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.testimonial-single-card:hover {
+  transform: translateY(-8px);
+}
+
+.testimonial-rating {
+  color: var(--secondary);
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #333;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0 0 2rem 0;
+  position: relative;
+}
+
+.testimonial-quote::before {
+  content: "";
+  font-family: serif;
+  font-size: 5rem;
+  color: rgba(46, 134, 171, 0.05);
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+  line-height: 1;
+  z-index: 0;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-author-info {
+  margin-left: 0;
+}
+
+.testimonial-author-name {
+  display: block;
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+}
+
+.testimonial-author-detail {
+  display: block;
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+.testimonial-cta {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.testimonial-cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--secondary);
+  color: var(--black);
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.testimonial-cta-button:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(246, 174, 45, 0.2);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (min-width: 768px) {
+  .testimonial-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonial-main-title {
+    font-size: 2.4rem;
+  }
+
+  .testimonial-single-card {
+    padding: 3rem;
+  }
+}
+
+/* ===== FINAL CTA SECTION ===== */
+.final-cta-section {
+  padding: 6rem 0;
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary) 100%
+  );
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.fcta-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.fcta-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fcta-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.3rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.fcta-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+}
+
+.fcta-action-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.fcta-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2rem;
+  background-color: var(--secondary);
+  color: var(--black);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  cursor: pointer;
+}
+
+.fcta-primary-button:hover {
+  background-color: white;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+.fcta-secondary-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.fcta-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.8rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fcta-secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.fcta-divider {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.fcta-button-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.fcta-primary-button:hover .fcta-button-icon {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.fcta-secondary-button:hover .fcta-button-icon {
+  transform: scale(1.1);
+}
+
+.fcta-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.fcta-guarantee-icon {
+  background-color: var(--secondary);
+  color: var(--black);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .final-cta-section {
+    padding: 4rem 0;
+  }
+
+  .fcta-title {
+    font-size: 1.8rem;
+  }
+
+  .fcta-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .fcta-primary-button {
+    font-size: 1.1rem;
+    padding: 1rem 1.8rem;
+  }
+
+  .fcta-secondary-button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fcta-secondary-group {
+    flex-direction: column;
+  }
+
+  .fcta-divider {
+    display: none;
+  }
+}
+
+/* Decorative Elements (Optional) */
+.final-ct
 /* ===== CONTACT SECTION ===== */
 /* ===== CONTACT SECTION ===== */
 /* ===== CONTACT SECTION ===== */
