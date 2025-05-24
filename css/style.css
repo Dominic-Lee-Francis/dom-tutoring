@@ -1,32 +1,47 @@
-/* ===== DEBUGGING ===== */
+/* ==========================================================================
+  GLOBAL DEBUGGING (Uncomment for layout debugging)
+  ========================================================================== */
 /*
 * {
   outline: 1px solid red;
 }
 */
 
-/* ===== GLOBAL VARIABLES ===== */
+/* ==========================================================================
+  GLOBAL CSS VARIABLES
+  ========================================================================== */
 :root {
-  --primary: #2e86ab;
-  --primary-dark: #1a5f7a;
-  --secondary: #f6ae2d;
-  --secondary-dark: #e6a425;
-  --white: #ffffff;
-  --black: #333333;
-  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-  --shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.8);
+  --primary: #2e86ab; /* Main brand color */
+  --primary-dark: #1a5f7a; /* Darker shade for contrast */
+  --secondary: #f6ae2d; /* Accent color for highlights/buttons */
+  --secondary-dark: #e6a425; /* Darker accent for hover states */
+  --white: #ffffff; /* Pure white */
+  --black: #333333; /* Main text color */
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1); /* Smooth transitions */
+  --shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.8); /* Strong hover shadow */
+  /* Updated Primary Colors */
+  --pedagogy-primary: #1a365d; /* Deep navy - conveys trust */
+  --pedagogy-secondary: #d4af37; /* Gold - prestige accent */
+  --pedagogy-accent: #2e86ab; /* Retains your brand blue as accent */
+
+  /* Supporting Colors */
+  --pedagogy-light: #f8f9fa;
+  --pedagogy-dark: #212529;
+  --pedagogy-muted: #6c757d;
 }
 
-/* ===== GLOBAL ELEMENTS ===== */
+/* ==========================================================================
+  GLOBAL ELEMENTS & ACCESSIBILITY
+  ========================================================================== */
 
-/* Ensure interactive elements are tappable */
+/* Make interactive elements easily tappable for accessibility */
 .nav-links a,
 .cta-button,
 .qualification-card {
-  min-height: 44px; /* Apple's recommended minimum */
+  min-height: 44px; /* Apple's recommended minimum touch target */
 }
 
-/* Prevent text overflow */
+/* Prevent awkward text breaks in headings and paragraphs */
 h1,
 h2,
 h3,
@@ -34,9 +49,11 @@ p {
   word-break: break-word;
 }
 
-/* ===== BASE STYLES ===== */
+/* ==========================================================================
+  BASE STYLES
+  ========================================================================== */
 
-/* Remove default body margin/padding */
+/* Reset default body margin/padding and set base font styles */
 body {
   margin: 0;
   padding: 0;
@@ -44,24 +61,29 @@ body {
   color: var(--black);
 }
 
-/* ===== NAVBAR ===== */
-/* ===== NAVBAR ===== */
-/* ===== NAVBAR ===== */
-/* ===== NAVBAR STYLES ===== */
+/* ==========================================================================
+  NAVBAR STYLES
+  ========================================================================== */
 
-/* --- Navbar Container --- */
+/* 
+  Main Navbar Container 
+  - Fixed to top, full width, with background and shadow.
+*/
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Viewport width for full bleed */
+  width: 100vw; /* Full viewport width */
   background-color: var(--primary);
   padding: 1.5rem 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Navbar Inner Container --- */
+/* 
+  Navbar Inner Container 
+  - Centers content and aligns logo and navigation.
+*/
 .container {
   width: 90%;
   max-width: 1200px;
@@ -71,7 +93,10 @@ body {
   align-items: center;
 }
 
-/* --- Logo --- */
+/* 
+  Logo Styles 
+  - Brand logo with hover underline animation.
+*/
 .logo {
   color: var(--white);
   font-family: "Poppins", sans-serif;
@@ -98,7 +123,10 @@ body {
   width: 100%;
 }
 
-/* --- Desktop Navigation Links --- */
+/* 
+  Desktop Navigation Links 
+  - Horizontal navigation for desktop screens.
+*/
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -131,7 +159,10 @@ body {
   transform: translateY(-2px);
 }
 
-/* --- Hamburger Menu (Mobile) --- */
+/* 
+  Hamburger Menu (Mobile) 
+  - Hidden on desktop, shown on mobile for menu toggle.
+*/
 .hamburger {
   display: none;
   background: none;
@@ -150,7 +181,10 @@ body {
   transform-origin: center;
 }
 
-/* --- Mobile Menu --- */
+/* 
+  Mobile Menu Drawer 
+  - Slides in from right on mobile, contains vertical nav links.
+*/
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -183,7 +217,14 @@ body {
   color: var(--secondary);
 }
 
-/* ===== NAVBAR: RESPONSIVENESS ===== */
+/* ==========================================================================
+  NAVBAR RESPONSIVENESS
+  ========================================================================== */
+
+/* 
+  Responsive Styles for Mobile Devices 
+  - Hamburger menu appears, desktop nav hides, mobile menu slides in.
+*/
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -207,6 +248,10 @@ body {
   }
 }
 
+/* 
+  Extra Small Devices 
+  - Reduce navbar and logo size for very small screens.
+*/
 @media (max-width: 375px) {
   .navbar {
     padding: 0.8rem 0;
@@ -219,8 +264,9 @@ body {
   }
 }
 
-/* ===== HERO SECTION ===== */
-/* ===== HERO SECTION ===== */
+/* ==========================================================================
+  HERO SECTION
+  ========================================================================== */
 /* ===== HERO SECTION ===== */
 .hero {
   padding: 8rem 0 4rem;
@@ -292,7 +338,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== HERO SECTION: RESPONSIVENESS ===== */
+/* --- HERO SECTION: RESPONSIVENESS --- */
 @media (max-width: 768px) {
   .hero {
     padding: 5rem 0 2rem;
@@ -316,10 +362,10 @@ body {
   }
 }
 
-/* ===== HOME PAGE ===== */ /* ===== HOME PAGE ===== */
-/* ===== HOME PAGE ===== */ /* ===== HOME PAGE ===== */
-/* ===== HOME PAGE ===== */ /* ===== HOME PAGE ===== */
-/* ===== HOME HERO SECTION ===== */
+/* ==========================================================================
+  HOME PAGE HERO SECTION
+  ========================================================================== */
+/* ===== HOME PAGE HERO SECTION ===== */
 .home-hero {
   padding: 7rem 0 3rem; /* Accounts for fixed navbar */
   background: linear-gradient(
@@ -377,7 +423,7 @@ body {
   line-height: 1.6;
 }
 
-/* Pulse Animation */
+/* --- Pulse Animation for Hero Elements --- */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -394,7 +440,7 @@ body {
   animation: pulse 2s infinite ease-in-out;
 }
 
-/* ===== MEDIA QUERIES ===== */
+/* --- HOME HERO: MEDIA QUERIES --- */
 @media (min-width: 768px) {
   .home-hero .container {
     flex-direction: row;
@@ -417,247 +463,206 @@ body {
   }
 }
 
+/* ==========================================================================
+  INTRO SECTION
+  ========================================================================== */
 /* ===== INTRO SECTION ===== */
-/* ===== INTRO SECTION ===== */
-/* ===== INTRO SECTION ===== */
-.intro-section {
-  padding: 0 0 3rem;
+.is-section {
+  padding: 0 0 4rem;
   background: white;
-}
-
-/* Title Container */
-.section-title-container {
-  background: var(--primary);
-  padding: 2rem 0;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.section-title-container h2 {
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  margin: 0;
-  line-height: 1.3;
-}
-
-/* Content Layout */
-.intro-content {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.intro-text {
-  order: 2;
-}
-
-.trust-badges {
-  order: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-/* Benefits List */
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.benefits-list li {
-  padding: 0.8rem 0 0.8rem 2rem;
   position: relative;
 }
 
-.benefits-list li::before {
+.is-title-container {
+  background: var(--primary);
+  padding: 2.5rem 0;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.is-main-title {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  margin: 0;
+  line-height: 1.3;
+  position: relative;
+}
+
+.is-inner-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.is-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.is-text-content {
+  order: 2;
+}
+
+.is-lead-text {
+  font-size: 1.15rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+.is-benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.is-benefit-item {
+  padding: 0.9rem 0 0.9rem 2.5rem;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.is-benefit-item::before {
   content: "•";
   color: var(--secondary);
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: absolute;
   left: 0;
   top: 0.5rem;
 }
 
-/* CTA Box */
-.intro-cta {
+.is-cta-box {
   background: rgba(46, 134, 171, 0.08);
-  padding: 1.5rem;
-  border-radius: 8px;
+  padding: 1.8rem;
+  border-radius: 12px;
+  margin-top: 2.5rem;
   text-align: center;
-  margin-top: 2rem;
 }
 
-/* ===== TRUST BADGES - ENHANCED ===== */
-.trust-badges {
+.is-cta-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.is-cta-button {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  background: var(--secondary);
+  color: var(--black);
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  font-size: 1.1rem;
+}
+
+.is-cta-button:hover {
+  background: var(--secondary-dark);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(246, 174, 45, 0.3);
+}
+
+/* --- Badges Grid --- */
+.is-badges-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.8rem;
+  order: 1;
 }
 
-.badge-card {
+.is-single-badge {
   background: white;
-  padding: 1.8rem 1.2rem;
+  padding: 1.8rem 1.5rem;
   border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  border-top: 4px solid var(--badge-color);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid var(--badge-accent);
   position: relative;
   overflow: hidden;
 }
 
-.badge-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--badge-color);
+.is-single-badge:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-.badge-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
-}
-
-.badge-icon {
+.is-badge-icon {
   font-size: 2.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   display: inline-block;
   transition: transform 0.3s ease;
 }
 
-.badge-card:hover .badge-icon {
-  transform: scale(1.1);
+.is-single-badge:hover .is-badge-icon {
+  transform: scale(1.15) rotate(5deg);
 }
 
-.badge-card h3 {
-  color: var(--badge-color);
-  margin-bottom: 0.6rem;
-  font-size: 1.1rem;
+.is-badge-title {
+  color: var(--badge-accent);
+  margin: 0 0 0.8rem 0;
+  font-size: 1.2rem;
 }
 
-.badge-card p {
+.is-badge-text {
   color: #555;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 0.95rem;
+  line-height: 1.5;
   margin: 0;
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
-@media (max-width: 768px) {
-  .trust-badges {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .trust-badges {
-    grid-template-columns: 1fr;
-  }
-
-  .badge-card {
-    padding: 1.5rem;
-  }
-}
-
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* --- INTRO SECTION: RESPONSIVE ADJUSTMENTS --- */
 @media (min-width: 768px) {
-  .intro-content {
+  .is-content-wrapper {
     flex-direction: row;
     align-items: flex-start;
+    gap: 4rem;
   }
 
-  .intro-text {
+  .is-text-content {
     flex: 1.5;
     order: 1;
   }
 
-  .trust-badges {
+  .is-badges-grid {
     flex: 1;
     order: 2;
     margin-top: 0;
   }
 
-  .intro-cta {
+  .is-cta-box {
     text-align: left;
   }
 }
 
-@media (max-width: 480px) {
-  .trust-badges {
-    grid-template-columns: 1fr;
+@media (min-width: 1024px) {
+  .is-main-title {
+    font-size: 2.5rem;
   }
 
-  .section-title-container h2 {
-    font-size: 1.7rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .trust-badges {
+  .is-badges-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .trust-badges {
+@media (max-width: 480px) {
+  .is-badges-grid {
     grid-template-columns: 1fr;
   }
-}
 
-/* Special adjustment for 4 badges on medium screens */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .intro-content {
-    flex-direction: column;
-  }
-
-  .trust-badges {
-    grid-template-columns: repeat(4, 1fr);
-    margin-top: 2rem;
+  .is-benefit-item {
+    font-size: 1rem;
+    padding-left: 2rem;
   }
 }
 
-/* ===== 768PX SPECIFIC FIX ===== */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .intro-content {
-    flex-direction: row; /* Maintain side-by-side layout */
-    align-items: flex-start;
-  }
-
-  .trust-badges {
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
-    gap: 1.2rem;
-    margin-left: 2rem; /* Adds breathing room */
-  }
-
-  .badge-card {
-    padding: 1.5rem 1rem; /* Slightly more compact */
-  }
-
-  .badge-card h3 {
-    font-size: 1rem; /* Slightly smaller heading */
-  }
-
-  .badge-card p {
-    font-size: 0.85rem; /* More compact text */
-  }
-}
-
-/* Special case for ~800-900px where horizontal space is tight */
-@media (min-width: 800px) and (max-width: 900px) {
-  .trust-badges {
-    margin-left: 1rem;
-  }
-
-  .intro-text {
-    flex: 1.2; /* Gives more space to text */
-  }
-}
-
+/* ==========================================================================
+  TEACHING METHODOLOGY PREVIEW
+  ========================================================================== */
 /* ===== TEACHING METHODOLOGY PREVIEW ===== */
 .teaching-methodology-preview {
   padding: 5rem 0;
@@ -780,7 +785,7 @@ body {
   border-bottom-color: var(--secondary);
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* --- TEACHING METHODOLOGY PREVIEW: RESPONSIVE ADJUSTMENTS --- */
 @media (min-width: 768px) {
   .tm-steps-grid {
     grid-template-columns: 1fr 1fr;
@@ -813,6 +818,9 @@ body {
   }
 }
 
+/* ==========================================================================
+  TESTIMONIALS SECTION
+  ========================================================================== */
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonial-section {
   padding: 5rem 0;
@@ -936,7 +944,7 @@ body {
   box-shadow: 0 10px 20px rgba(246, 174, 45, 0.2);
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* --- TESTIMONIALS: RESPONSIVE ADJUSTMENTS --- */
 @media (min-width: 768px) {
   .testimonial-cards {
     grid-template-columns: 1fr 1fr;
@@ -958,6 +966,9 @@ body {
   }
 }
 
+/* ==========================================================================
+  FINAL CTA SECTION
+  ========================================================================== */
 /* ===== FINAL CTA SECTION ===== */
 .final-cta-section {
   padding: 6rem 0;
@@ -1096,7 +1107,7 @@ body {
   font-weight: bold;
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* --- FINAL CTA: RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 768px) {
   .final-cta-section {
     padding: 4rem 0;
@@ -1130,99 +1141,9 @@ body {
   }
 }
 
-/* Decorative Elements (Optional) */
-.final-ct
-/* ===== CONTACT SECTION ===== */
-/* ===== CONTACT SECTION ===== */
-/* ===== CONTACT SECTION ===== */
-.contact {
-  padding: 5rem 0;
-  background-color: var(--light);
-  text-align: center;
-}
-
-.contact .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* --- Section Header --- */
-.section-header {
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 3rem;
-}
-
-/* --- Contact Methods Grid --- */
-.contact-methods {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  width: 100%;
-  max-width: 1000px;
-  margin: 3rem auto 0 auto;
-}
-
-/* --- Contact Card --- */
-.contact-card {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  transition: var(--transition);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-}
-
-/* --- Contact Icon --- */
-.contact-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-}
-
-/* --- Contact Card Heading --- */
-.contact-card h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-/* --- Contact Card Text --- */
-.contact-card p {
-  color: var(--black);
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-/* --- Contact Link/Button --- */
-.contact-link {
-  display: inline-block;
-  background: var(--primary);
-  color: white;
-  padding: 0.6rem 1.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.contact-link:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
-}
-
-/* ===== CONTACT SECTION: RESPONSIVENESS ===== */
-@media (max-width: 768px) {
-  .contact-methods {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-  }
-}
+/* --- Decorative Elements (Optional) ---
+  Add your own decorative backgrounds or shapes here for the final CTA section.
+*/
 
 /* ===== FOOTER ===== */
 /* ===== FOOTER ===== */
@@ -1433,232 +1354,530 @@ body {
 }
 
 /* --- Bio Section --- */
-.bio-section {
-  padding: 4rem 0;
-  background-color: #f9f9f9;
+/* ===== ABOUT BIO SECTION ===== */
+.ab-section {
+  padding: 5rem 0;
+  background-color: #f8fafc;
 }
 
-.bio-grid {
+.ab-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ab-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
   align-items: center;
 }
 
-.bio-image img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+.ab-image-wrapper {
+  order: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
 }
 
-/* --- Bio Highlights --- */
-.bio-highlights {
+.ab-profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ab-image-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+.ab-image-wrapper:hover .ab-profile-image {
+  transform: scale(1.03);
+}
+
+.ab-text-content {
+  order: 2;
+}
+
+.ab-main-heading {
+  color: var(--primary-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+  line-height: 1.3;
+}
+
+.ab-paragraphs {
+  margin-bottom: 2.5rem;
+}
+
+.ab-text-paragraph {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.ab-highlights-container {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.8rem;
   margin-top: 2rem;
 }
 
-.highlight-item {
+.ab-single-highlight {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
+  background: rgba(46, 134, 171, 0.08);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
 }
 
-.highlight-icon {
-  font-size: 1.5rem;
+.ab-highlight-icon {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
 }
 
-/* ===== TEACHING METHODOLOGY ===== */
-/* ===== TEACHING METHODOLOGY ===== */
-/* ===== TEACHING METHODOLOGY ===== */
-
-/* --- Method Header Container --- */
-.method-header-container {
-  background-color: #f9f9f9;
-  color: var(--primary);
-  text-align: center;
-  margin-bottom: 0.8rem;
-  font-size: 2rem;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  padding: 2rem 1rem 1rem 1rem;
+.ab-single-highlight:hover .ab-highlight-icon {
+  transform: scale(1.2) rotate(5deg);
 }
 
-.method-header-container .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.ab-highlight-text {
+  margin: 0;
+  font-weight: 600;
+  color: var(--primary-dark);
+  font-size: 1rem;
 }
 
-.method-header-container h2 {
-  margin-bottom: 0.8rem;
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (min-width: 768px) {
+  .ab-content-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+  .ab-image-wrapper {
+    order: 2;
+  }
+
+  .ab-text-content {
+    order: 1;
+  }
+
+  .ab-main-heading {
+    font-size: 2.4rem;
+  }
 }
 
-/* --- Method Flow Container --- */
-.method-flow-container {
-  background-color: #f9f9f9;
-  padding: 0 0 3rem 0;
+@media (min-width: 1024px) {
+  .ab-section {
+    padding: 6rem 0;
+  }
+
+  .ab-text-paragraph {
+    font-size: 1.15rem;
+  }
 }
 
-/* --- Teaching Method Section --- */
-.teaching-method {
-  background-color: #f9f9f9;
-  padding: 0; /* Now handled by inner containers */
+/* ===== QUALIFICATIONS SECTION ===== */
+.aq-section {
+  padding: 5rem 0;
+  background-color: white;
 }
 
-/* --- Methodology Flow --- */
-.methodology-flow {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 800px;
+.aq-container {
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
-  margin-top: 3rem;
-  position: relative;
 }
 
-/* --- Method Step --- */
-.method-step {
+.aq-main-title {
+  text-align: center;
+  color: var(--primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.aq-subtitle {
+  text-align: center;
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+  margin-bottom: 3.5rem;
+}
+
+.aq-qualifications-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.aq-single-qualification {
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  border-left: 4px solid var(--primary);
+}
+
+.aq-single-qualification:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(46, 134, 171, 0.1);
+}
+
+.aq-qual-header {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  position: relative;
-  z-index: 1;
-  padding-left: 30px;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.step-number {
-  background-color: var(--secondary);
+.aq-qual-icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease;
+}
+
+.aq-single-qualification:hover .aq-qual-icon {
+  transform: scale(1.2);
+}
+
+.aq-qual-title {
+  color: var(--primary-dark);
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.aq-qual-content {
+  padding-left: 0.5rem;
+}
+
+.aq-qual-subtitle {
+  color: var(--primary);
+  margin: 0 0 0.8rem 0;
+  font-size: 1.2rem;
+}
+
+.aq-qual-text {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.aq-qual-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.aq-meta-item {
+  background: rgba(46, 134, 171, 0.1);
+  color: var(--primary-dark);
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.aq-qual-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0 0;
+}
+
+.aq-qual-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.aq-qual-list li::before {
+  content: "•";
+  color: var(--secondary);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -0.3rem;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (min-width: 768px) {
+  .aq-qualifications-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .aq-main-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aq-section {
+    padding: 6rem 0;
+  }
+
+  .aq-single-qualification {
+    padding: 2.5rem;
+  }
+}
+
+/* ===== TEACHING METHODOLOGY ===== */
+/* ===== TEACHING METHODOLOGY ===== */
+/* ===== TEACHING METHODOLOGY ===== */
+
+/* ===== PREMIUM TEACHING METHODOLOGY ===== */
+.pedagogy-section {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.pedagogy-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.pedagogy-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.pedagogy-subheading {
+  display: inline-block;
+  background: rgba(26, 54, 93, 0.1);
+  color: var(--pedagogy-primary);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.pedagogy-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  color: var(--pedagogy-primary);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.pedagogy-description {
+  color: #555;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.pedagogy-process {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pedagogy-phase {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+
+.phase-decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.phase-number {
+  background: var(--pedagogy-primary);
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  flex-shrink: 0;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(26, 54, 93, 0.2);
+  position: relative;
+  z-index: 2;
 }
 
-.step-content {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+.phase-connector {
   flex-grow: 1;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    var(--pedagogy-primary),
+    rgba(26, 54, 93, 0.3)
+  );
+  margin: 1rem 0;
 }
 
-.step-content h3 {
-  color: var(--primary);
-  margin: 0 0 0.5rem 0;
+.phase-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(26, 54, 93, 0.1);
 }
 
-.step-content p {
-  margin: 0;
-  color: var(--black);
+.pedagogy-phase:hover .phase-content {
+  transform: translateX(10px);
+  box-shadow: 0 15px 40px rgba(46, 134, 171, 0.15);
+  border-color: rgba(46, 134, 171, 0.2);
 }
 
-/* --- CTA Section --- */
-.services-cta {
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 3rem 0;
-  margin-top: 2rem;
+.phase-content:hover {
+  border-color: rgba(212, 175, 55, 0.3);
 }
 
-.services-cta h2 {
+.phase-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  color: var(--pedagogy-secondary);
+}
+
+.pedagogy-phase:hover .phase-icon {
+  transform: scale(1.2);
+}
+
+.phase-title {
+  color: var(--pedagogy-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.phase-description {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-/* ===== RESPONSIVENESS ===== */
+.phase-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-/* --- Tablet & Mobile --- */
+.phase-details li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+
+.phase-details li::before {
+  content: "•";
+  color: var(--pedagogy-secondary);
+  font-size: 1.8rem;
+  position: absolute;
+  left: 0;
+  top: -0.3rem;
+}
+
+/* Decorative Elements */
+.pedagogy-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.08) 0%,
+    rgba(212, 175, 55, 0) 70%
+  );
+}
+
+.pedagogy-section::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(26, 54, 93, 0.08) 0%,
+    rgba(26, 54, 93, 0) 70%
+  );
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 768px) {
-  .method-header-container {
-    padding: 1.5rem 1rem 0.5rem 1rem;
-  }
-
-  .method-header-container .container {
-    display: block;
-    text-align: left;
-    padding: 0 1rem;
-  }
-
-  .method-header-container h2 {
-    font-size: 1.7rem;
-    margin-bottom: 0.5rem;
-    text-align: left;
-  }
-
-  .section-intro {
-    text-align: left;
-    margin-top: 0;
-    padding-left: 0;
-    font-size: 1.1rem;
-    line-height: 1.4;
-  }
-
-  .method-flow-container {
-    padding-bottom: 2rem;
-  }
-
-  .teaching-method {
-    padding: 3rem 0;
-  }
-
-  .methodology-flow {
+  .pedagogy-phase {
+    flex-direction: column;
     gap: 1.5rem;
-    padding: 0 0.5rem;
+    margin-bottom: 3rem;
   }
 
-  .method-step {
-    gap: 1rem;
-    padding-left: 25px;
+  .phase-decoration {
+    flex-direction: row;
+    width: auto;
+    align-items: center;
   }
 
-  .step-number {
-    width: 36px;
-    height: 36px;
-    font-size: 1.1rem;
-    left: -5px;
+  .phase-connector {
+    width: 40px;
+    height: 3px;
+    margin: 0 1rem;
+    background: linear-gradient(
+      to right,
+      var(--primary),
+      rgba(46, 134, 171, 0.3)
+    );
   }
 
-  .step-content {
-    padding: 1.2rem;
+  .pedagogy-title {
+    font-size: 2.2rem;
+  }
+
+  .phase-content {
+    padding: 2rem;
   }
 }
 
-/* --- Small Mobile Devices --- */
 @media (max-width: 480px) {
-  .method-header-container h2 {
-    font-size: 1.5rem;
+  .pedagogy-header {
+    margin-bottom: 3rem;
   }
 
-  .section-intro {
+  .pedagogy-title {
+    font-size: 1.8rem;
+  }
+
+  .pedagogy-description {
     font-size: 1rem;
   }
 
-  .method-step {
-    flex-direction: row;
-    align-items: center;
-    padding-left: 30px;
-  }
-
-  .step-number {
-    position: absolute;
-    left: 0;
-  }
-
-  .methodology-flow::before {
-    left: 18px;
+  .phase-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
   }
 }
 
@@ -2463,7 +2682,97 @@ body {
     font-size: 1rem;
   }
 }
+/* ===== CONTACT SECTION ===== */
+/* ===== CONTACT SECTION ===== */
+/* ===== CONTACT SECTION ===== */
+.contact {
+  padding: 5rem 0;
+  background-color: var(--light);
+  text-align: center;
+}
 
+.contact .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Section Header --- */
+.section-header {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 3rem;
+}
+
+/* --- Contact Methods Grid --- */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem auto 0 auto;
+}
+
+/* --- Contact Card --- */
+.contact-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Contact Icon --- */
+.contact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* --- Contact Card Heading --- */
+.contact-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* --- Contact Card Text --- */
+.contact-card p {
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* --- Contact Link/Button --- */
+.contact-link {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.contact-link:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ===== CONTACT SECTION: RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  .contact-methods {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
 /* ===== CONTACT METHODS SECTION ===== */
 .contact-methods-section {
   padding: 4rem 0;
