@@ -23,29 +23,16 @@ document.querySelectorAll(".nav-link, .mobile-nav-link").forEach((link) => {
   }
 });
 
-// Accordion functionality
-document.querySelectorAll(".accordion-header").forEach((header) => {
-  header.addEventListener("click", (e) => {
-    const item = header.parentElement;
-    const wasActive = item.classList.contains("active");
+// FAQ Accordion Functionality
+document.querySelectorAll(".fq-question").forEach((button) => {
+  button.addEventListener("click", () => {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", !isExpanded);
 
-    // Close all items
-    document.querySelectorAll(".accordion-item").forEach((el) => {
-      el.classList.remove("active");
-    });
-
-    // Open clicked item if it wasn't active
-    if (!wasActive) {
-      item.classList.add("active");
-
-      // Smooth scroll to ensure visibility
-      setTimeout(() => {
-        item.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-        });
-      }, 300);
-    }
+    const answer = document.getElementById(
+      button.getAttribute("aria-controls")
+    );
+    answer.style.maxHeight = isExpanded ? "0" : `${answer.scrollHeight}px`;
   });
 });
 

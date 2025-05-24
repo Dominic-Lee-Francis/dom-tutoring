@@ -1325,7 +1325,6 @@ body {
 /* ===== ... ===== */
 /* ===== ABOUT PAGE SPECIFIC STYLES ===== */
 
-/* --- About Hero Section --- */
 /* ===== ABOUT HERO SECTION ===== */
 .ah-section {
   padding: 3.5rem 0 2.5rem; /* Reduced from 6rem/8rem */
@@ -2283,534 +2282,543 @@ body {
 }
 
 /* ===== PAGE HERO ===== */
-.page-hero {
+/* ===== SERVICES HERO SECTION ===== */
+.sh-section {
+  padding: 4rem 0 2.5rem;
   background: linear-gradient(
     135deg,
-    var(--primary) 0%,
-    var(--primary-dark) 100%
+    var(--pedagogy-primary) 0%,
+    var(--pedagogy-accent) 100%
   );
   color: white;
-  padding: 1rem 1rem;
-  margin-top: -2rem;
   text-align: center;
-  display: flex;
-  align-items: center;
-  min-height: 200px;
+  position: relative;
+  overflow: hidden;
 }
 
-.page-hero .container {
-  width: 100%;
-  padding: 0 1rem;
-}
-
-.page-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: white;
-  line-height: 1.3;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  hyphens: none;
-}
-
-.page-hero .subtitle {
-  font-size: 1.2rem;
-  color: rgb(220, 220, 220);
-  opacity: 0.9;
-  line-height: 1.4;
-  max-width: 600px;
+.sh-container {
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
-  word-break: normal;
-  padding-top: 1.5rem;
 }
 
-/* ===== PAGE HERO: RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .page-hero {
-    padding: 2rem 1rem;
-    min-height: 180px;
+.sh-content {
+  position: relative;
+  z-index: 2;
+}
+
+.sh-main-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.3;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sh-subtitle {
+  font-size: 1.15rem;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 1.8rem;
+}
+
+/* Service Badges */
+.sh-service-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sh-service-badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 0.7rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.sh-service-badge:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.sh-badge-icon {
+  font-size: 1.1rem;
+}
+
+.sh-badge-text {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Decorative Elements */
+.sh-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.15) 0%,
+    rgba(212, 175, 55, 0) 70%
+  );
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 767px) {
+  /* Navbar spacing fix */
+  .sh-section {
+    padding-top: calc(4rem + 60px);
+    margin-top: -60px;
   }
-  .page-hero h1 {
-    font-size: 1.8rem;
-    padding: 0 0.5rem;
+
+  .sh-container::before {
+    content: "";
+    display: block;
+    height: 60px;
+    margin-top: -60px;
+    visibility: hidden;
   }
-  .page-hero .subtitle {
-    font-size: 1.1rem;
-    padding: 0 0.5rem;
+
+  .sh-service-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sh-service-badge {
+    width: 100%;
+    max-width: 220px;
+    justify-content: center;
   }
 }
 
-@media (max-width: 480px) {
-  .page-hero h1 {
-    font-size: 1.6rem;
-    line-height: 1.2;
+@media (min-width: 768px) {
+  .sh-section {
+    padding: 5rem 0 3rem;
   }
-  .page-hero .subtitle {
-    font-size: 1rem;
+
+  .sh-main-title {
+    font-size: 2.8rem;
+  }
+
+  .sh-subtitle {
+    font-size: 1.25rem;
   }
 }
 
 /* ===== SERVICE PACKAGES SECTION ===== */
-.service-packages {
-  padding: 4rem 0 0 0;
+/* ===== SERVICES PACKAGES SECTION ===== */
+.sp-section {
+  padding: 5rem 0;
+  padding-top: 0rem;
+  background-color: #f8fafc;
 }
 
-/* ===== SECTION INTRO ===== */
-.section-intro {
-  font-size: 1.1rem;
-  color: var(--black);
-  margin-bottom: 3rem;
-  text-align: center;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ===== SECTION HEADER CONTAINER ===== */
-.section-header-container {
-  background-color: #f9f9f9;
-  padding: 2rem 0 0 0;
+.sp-header-container {
+  background-color: white;
+  padding: 2.5rem 0;
   margin-bottom: 2rem;
   text-align: center;
-  border-bottom: 1px solid #eee;
 }
 
-.section-header-container h2 {
-  color: var(--primary);
-  margin-bottom: 0.8rem;
-  font-size: 2rem;
-  word-break: keep-all; /* Prevent mid-word breaks */
-  overflow-wrap: break-word; /* Allow breaking only at appropriate points */
-  hyphens: auto; /* Enable hyphenation where needed */
-  padding: 0 1rem; /* Add side padding on mobile */
-}
-
-.section-intro {
-  font-size: 1.1rem;
-  color: var(--black);
-  max-width: 700px;
+.sp-inner-container {
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
-  line-height: 1.5;
-  padding: 0 1rem; /* Match h2 padding */
-  word-break: normal; /* More natural word breaks */
-  hyphens: manual; /* Less aggressive than auto */
 }
 
-/* ===== PACKAGE CARDS ===== */
-.package-cards {
-  display: flex;
-  flex-direction: column;
+.sp-main-title {
+  color: var(--pedagogy-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.sp-subtitle {
+  color: var(--pedagogy-primary-dark);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sp-packages-grid {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.package-card {
+.sp-package-card {
   background: white;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(46, 134, 171, 0.15);
+}
+
+.sp-highlight {
+  border-top: 4px solid var(--pedagogy-secondary);
   position: relative;
 }
 
-.package-header {
-  background: var(--primary);
-  color: white;
-  padding: 1.5rem;
-  position: relative;
-}
-
-.package-header h3 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.price {
-  font-size: 1.2rem;
+.sp-highlight::before {
+  content: "Popular Choice";
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background: var(--pedagogy-secondary);
+  color: var(--pedagogy-primary);
+  padding: 0.3rem 2rem;
+  transform: rotate(45deg);
+  font-size: 0.8rem;
   font-weight: 600;
-  margin-top: 0.5rem;
-  opacity: 0.9;
+  text-align: center;
+  width: 150px;
 }
 
-.package-content {
-  padding: 1.5rem;
+.sp-card-header {
+  padding: 1.8rem 1.8rem 1rem;
+  border-bottom: 1px solid rgba(46, 134, 171, 0.1);
 }
 
-.package-features {
+.sp-package-name {
+  color: var(--pedagogy-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.sp-price {
+  color: var(--pedagogy-secondary);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.sp-card-body {
+  padding: 1.5rem 1.8rem;
+  flex-grow: 1;
+}
+
+.sp-features-list {
+  list-style: none;
   padding: 0;
   margin: 0 0 1.5rem 0;
-  list-style: none;
 }
 
-.package-features li {
-  padding: 0.5rem 0 0.5rem 1.8rem;
+.sp-feature-item {
+  padding: 0.7rem 0;
   position: relative;
-  line-height: 1.4;
+  padding-left: 1.8rem;
+  line-height: 1.5;
 }
 
-.package-features li:before {
-  content: "✓";
+.sp-feature-icon {
   position: absolute;
   left: 0;
-  color: var(--secondary);
-  font-weight: bold;
+  color: var(--pedagogy-secondary);
 }
 
-.package-details {
+.sp-details {
   margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #eee;
 }
 
-.session-options {
+.sp-description {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.sp-options {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-top: 1rem;
+  font-size: 0.9rem;
 }
 
-.session-options span {
-  background: #f5f5f5;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
+.sp-option {
+  background: rgba(46, 134, 171, 0.08);
+  color: var(--pedagogy-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 50px;
 }
 
-.package-cta {
+.sp-cta-button {
   display: block;
   text-align: center;
-  background: var(--secondary);
-  color: var(--black);
+  background: var(--pedagogy-secondary);
+  color: white;
   padding: 1rem;
   text-decoration: none;
   font-weight: 600;
-  transition: var(--transition);
+  transition: all 0.3s ease;
+  margin-top: auto;
 }
 
-.package-cta:hover {
-  background: var(--secondary-dark);
+.sp-cta-button:hover {
+  background: var(--pedagogy-accent);
 }
 
-/* ===== RESPONSIVENESS ===== */
-
-/* Tablet & below */
-@media (max-width: 768px) {
-  .section-header-container {
-    padding: 1.5rem 0 0 0;
-  }
-
-  .section-header-container h2 {
-    font-size: 1.7rem;
-    line-height: 1.3;
-    word-spacing: -0.05em;
-  }
-
-  .section-intro {
-    font-size: 1rem;
-    line-height: 1.4;
-    padding: 0 1rem;
-  }
-}
-
-/* Very small screens */
-@media (max-width: 400px) {
-  .section-header-container h2 {
-    font-size: 1.5rem;
-    padding: 0 0.5rem;
-  }
-}
-
-/* Desktop Layout */
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (min-width: 768px) {
-  .package-cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  .sp-packages-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
   }
 
-  .package-card {
-    flex: 1;
-    min-width: 300px;
-    max-width: 350px;
+  .sp-main-title {
+    font-size: 2.5rem;
+  }
+
+  .sp-highlight {
+    transform: scale(1.03);
+  }
+
+  .sp-highlight:hover {
+    transform: scale(1.03) translateY(-8px);
   }
 }
 
-/* Mobile Optimizations */
 @media (max-width: 480px) {
-  .package-header {
-    padding: 1.2rem;
+  .sp-header-container {
+    padding: 1.5rem 0;
   }
 
-  .package-header h3 {
-    font-size: 1.3rem;
-  }
-
-  .price {
-    font-size: 1.1rem;
-  }
-
-  .package-features li {
-    font-size: 0.95rem;
-  }
-
-  .feature-badge {
-    right: -35px;
-    font-size: 0.7rem;
-    padding: 0.2rem 1.8rem;
+  .sp-package-card {
+    max-width: 350px;
+    margin: 0 auto;
   }
 }
 
 /* ===== FAQ SECTION ===== */
-.faq-section {
-  padding: 0; /* Now handled by inner containers */
-  background: white;
-}
-
-/* ===== FAQ HEADER ===== */
-.faq-header-container .section-header-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.faq-main-heading {
-  color: var(--primary);
-  margin-bottom: 0.8rem;
-  font-size: 2rem;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  padding: 0 1rem;
-}
-
-.faq-section-intro {
-  font-size: 1.1rem;
-  color: var(--black);
-  max-width: 700px;
-  margin: 0 auto 3rem auto;
-  line-height: 1.5;
-  padding: 0 1rem;
-  word-break: normal;
-  hyphens: manual;
-}
-
-/* ===== FAQ CONTENT ===== */
-.faq-content-container {
-  background-color: white;
-  padding: 0 0 3rem 0;
-}
-
-.faq-content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.faq-accordion {
-  max-width: 800px;
-  margin: 2rem auto 0;
-  width: 100%;
-}
-
-.faq-item {
-  display: block;
-  width: 100%;
-}
-
-.faq-question {
-  /* Add these properties to your existing .faq-question */
-  appearance: none; /* Removes default system UI */
-  -webkit-appearance: none; /* For Safari */
-  background-image: none; /* Removes any default background images */
-}
-
-/* Specifically target any pseudo-elements that might be added by the browser */
-.faq-question::-webkit-details-marker,
-.faq-question::marker {
-  display: none !important;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 1.2rem 1rem;
-  text-align: left;
-  background: none;
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--primary-dark);
-  transition: var(--transition);
-  transition: all 0.2s ease;
-}
-
-.faq-question:focus-visible {
-  outline: 2px solid var(--secondary);
-  outline-offset: 2px;
-}
-
-.faq-item.active .faq-question {
-  font-weight: 600;
-  color: var(--primary-dark);
-}
-
-.faq-section .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.faq-question:hover {
-  color: var(--primary);
-}
-
-/* Replace .accordion-icon styles with: */
-.faq-question .accordion-icon {
-  display: inline-flex; /* Use flex instead of block */
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
+/* ===== FAQ SECTION ===== */
+.fq-section {
+  padding: 5rem 0;
+  background-color: #f8fafc;
   position: relative;
-  transition: transform 0.3s ease;
-  /* Explicitly hide any content */
-  background: transparent !important;
-  color: transparent !important;
 }
 
-/* Ensure no other pseudo-elements exist */
-.faq-question .accordion-icon::before,
-.faq-question .accordion-icon::after,
-.faq-question .accordion-icon * {
-  all: unset; /* Reset any inherited styles */
+.fq-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Then reapply your custom icon styles */
-.faq-question .accordion-icon::before,
-.faq-question .accordion-icon::after {
-  content: "";
-  position: absolute;
-  background-color: var(--secondary);
-  transition: transform 0.3s ease;
+.fq-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
 }
 
-.faq-question .accordion-icon::before {
-  width: 100%;
-  height: 2px;
-  top: 50%;
-  transform: translateY(-50%);
+.fq-subheading {
+  display: inline-block;
+  color: var(--pedagogy-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
-.faq-question .accordion-icon::after {
-  width: 2px;
-  height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+.fq-main-title {
+  color: var(--pedagogy-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  margin: 0 0 0.8rem 0;
 }
 
-.faq-item.active .faq-question .accordion-icon::after {
-  transform: translateX(-50%) rotate(90deg);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.65, 0, 0.35, 1);
-  padding: 0 1rem;
-  background-color: rgba(246, 174, 45, 0.05);
-  border-left: 3px solid var(--secondary);
-}
-
-.faq-answer p {
-  margin: 0;
-  padding: 0.5rem 0 1.5rem;
+.fq-description {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
   line-height: 1.6;
 }
 
-/* ===== FAQ ACTIVE STATE ===== */
-/* .faq-item.active .faq-question {
-  color: var(--primary);
+/* Accordion Styles */
+.fq-accordion {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.faq-item.active .accordion-icon {
+.fq-item {
+  border-bottom: 1px solid rgba(26, 54, 93, 0.1);
+  background: white;
+}
+
+.fq-item:last-child {
+  border-bottom: none;
+}
+
+.fq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.fq-question:hover {
+  background-color: rgba(212, 175, 55, 0.05);
+}
+
+.fq-question-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--pedagogy-primary);
+  margin-right: 1rem;
+}
+
+.fq-icon {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--pedagogy-secondary);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.fq-question[aria-expanded="true"] .fq-icon {
   transform: rotate(45deg);
-} */
-
-.faq-item.active .faq-answer {
-  max-height: 500px; /* Adjust based on your longest answer */
-  transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-/* ===== FAQ CTA ===== */
-.faq-cta {
+.fq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.fq-answer-content {
+  padding: 0 2rem 1.5rem;
+}
+
+.fq-answer p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.fq-answer ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.fq-answer li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.fq-answer li::before {
+  content: "•";
+  color: var(--pedagogy-secondary);
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -0.3rem;
+}
+
+/* CTA Styles */
+.fq-cta {
   text-align: center;
   margin-top: 3rem;
 }
 
-.faq-cta p {
+.fq-cta-text {
+  color: var(--pedagogy-primary);
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  font-size: 1.1rem;
 }
 
-/* ===== FAQ RESPONSIVENESS ===== */
+.fq-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--pedagogy-primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  box-shadow: 0 5px 15px rgba(26, 54, 93, 0.2);
+}
+
+.fq-cta-button:hover {
+  background: var(--pedagogy-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 134, 171, 0.3);
+}
+
+.fq-button-icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.fq-cta-button:hover .fq-button-icon {
+  transform: rotate(15deg);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 768px) {
-  .faq-header-container {
-    padding: 1.5rem 0 0.5rem;
-    text-align: left;
+  .fq-section {
+    padding: 4rem 0;
   }
 
-  .faq-header-container .container {
-    padding: 0 1rem;
+  .fq-main-title {
+    font-size: 1.8rem;
   }
 
-  .faq-main-heading {
-    font-size: 1.7rem;
-    text-align: left;
-    padding: 0;
-  }
-
-  .faq-section-intro {
-    font-size: 1rem;
-    text-align: left;
-    margin-bottom: 2rem;
-    padding: 0;
-  }
-
-  .faq-content-container {
-    padding-bottom: 2rem;
-  }
-
-  .faq-accordion {
-    margin-top: 1.5rem;
-    padding: 0 0.5rem;
-  }
-
-  .faq-question {
-    padding: 1rem 0.8rem;
+  .fq-description {
     font-size: 1rem;
   }
 
-  .faq-answer p {
-    font-size: 0.95rem;
+  .fq-question {
+    padding: 1.2rem 1.5rem;
   }
 
-  .faq-cta {
-    margin-top: 2rem;
+  .fq-question-text {
+    font-size: 1rem;
+  }
+
+  .fq-answer-content {
+    padding: 0 1.5rem 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .faq-main-heading {
-    font-size: 1.5rem;
+  .fq-header {
+    margin-bottom: 2.5rem;
   }
 
-  .faq-section-intro {
+  .fq-cta-button {
+    padding: 0.9rem 1.8rem;
     font-size: 0.95rem;
   }
 }
