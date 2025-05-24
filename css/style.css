@@ -20,7 +20,7 @@
   --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1); /* Smooth transitions */
   --shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.8); /* Strong hover shadow */
   /* Updated Primary Colors */
-  --pedagogy-primary: #1a365d; /* Deep navy - conveys trust */
+  --pedagogy-primary: #1a5f7a; /* Deep navy - conveys trust */
   --pedagogy-secondary: #d4af37; /* Gold - prestige accent */
   --pedagogy-accent: #2e86ab; /* Retains your brand blue as accent */
 
@@ -1326,31 +1326,162 @@ body {
 /* ===== ABOUT PAGE SPECIFIC STYLES ===== */
 
 /* --- About Hero Section --- */
-.about-hero {
+/* ===== ABOUT HERO SECTION ===== */
+.ah-section {
+  padding: 3.5rem 0 2.5rem; /* Reduced from 6rem/8rem */
   background: linear-gradient(
     135deg,
-    var(--primary) 0%,
-    var(--primary-dark) 100%
+    var(--pedagogy-primary) 0%,
+    var(--pedagogy-accent) 100%
   );
   color: white;
-  padding: 1rem 1rem; /* Adjusted padding for mobile */
-  margin-top: -2rem; /* Pulls the hero section up */
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ah-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ah-main-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ah-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  margin-bottom: 1.8rem;
+}
+
+/* Achievement Badges */
+.ah-badges-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.ah-badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem;
+  display: inline-flex;
   align-items: center;
-  min-height: 200px; /* Minimum height for better spacing */
+  gap: 0.6rem;
+  transition: all 0.3s ease;
 }
 
-.about-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.ah-badge:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
 }
 
-.about-hero .subtitle {
+.ah-badge-icon {
   font-size: 1.2rem;
-  opacity: 0.9;
-  color: rgb(220, 220, 220);
-  padding-top: 1.5rem;
+}
+
+.ah-badge-text {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Decorative Elements */
+.ah-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.15) 0%,
+    rgba(212, 175, 55, 0) 70%
+  );
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (min-width: 768px) {
+  .ah-section {
+    padding: 4rem 0;
+  }
+
+  .ah-main-title {
+    font-size: 2.4rem;
+  }
+
+  .ah-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+  }
+
+  .ah-badge {
+    padding: 1rem 1.8rem;
+  }
+
+  .ah-badge-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ah-section {
+    padding: 3rem 0;
+  }
+  .ah-badges-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ah-badge {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}
+
+/* ===== MOBILE NAVBAR/HERO SPACING FIX ===== */
+@media (max-width: 767px) {
+  .ah-section {
+    padding-top: calc(3.5rem + 60px); /* Adjust based on your navbar height */
+    margin-top: -60px; /* Pulls hero up to meet navbar */
+  }
+
+  /* Ensure content doesn't hide behind fixed navbar */
+  .ah-container::before {
+    content: "";
+    display: block;
+    height: 60px; /* Same as navbar height */
+    margin-top: -60px;
+    visibility: hidden;
+  }
+}
+
+/* Existing hero styles with small adjustment */
+.ah-section {
+  padding: 3.5rem 0 2.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--pedagogy-primary) 0%,
+    var(--pedagogy-accent) 100%
+  );
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Ensure it stays below navbar */
 }
 
 /* --- Bio Section --- */
@@ -1884,70 +2015,197 @@ body {
 /* WHY I TEACH - Specific Styles */
 /* WHY I TEACH - Specific Styles */
 /* ===== WHY I TEACH - Specific Styles ===== */
-
-/* --- Section Container --- */
-.about-why-teach {
-  background: var(--light);
-  padding: 5rem 0;
+/* ===== WHY I TEACH SECTION ===== */
+.wit-section {
+  padding: 6rem 0;
+  background-color: #f8fafc;
+  position: relative;
 }
 
-/* --- Grid Layout --- */
-.why-teach-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+.wit-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.why-teach-content {
-  max-width: 600px;
+.wit-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 4rem;
 }
 
-/* --- Photo Styles & Animation --- */
-.why-teach-photo img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-out forwards;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  transform: scale(0.98);
+.wit-subheading {
+  display: inline-block;
+  color: var(--pedagogy-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 
-.photo-load:hover img {
-  transform: scale(1.01);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+.wit-main-heading {
+  color: var(--pedagogy-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  margin: 0 0 2rem 0;
+  line-height: 1.3;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0.8;
-    transform: scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.wit-philosophy {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-/* --- Quote & Caption --- */
-.why-teach-quote {
-  font-style: italic;
-  border-left: 3px solid var(--secondary);
-  padding-left: 1.5rem;
+.wit-paragraph {
+  color: #333;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.wit-quote-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
   margin: 1.5rem 0;
+  border-left: 4px solid var(--pedagogy-secondary);
 }
 
-.photo-caption {
-  text-align: center;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  color: var(--primary-dark);
+.wit-quote-mark {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  color: rgba(212, 175, 55, 0.15);
+  line-height: 1;
 }
 
-/* --- CTA Button --- */
-.why-teach-cta {
+.wit-quote {
+  font-style: italic;
+  color: var(--pedagogy-primary);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.wit-quote-decoration {
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  width: 60px;
+  height: 3px;
+  background: var(--pedagogy-secondary);
+}
+
+/* Image Styles */
+.wit-visual-content {
+  order: -1;
+}
+
+.wit-image-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.wit-profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.wit-image-container:hover .wit-profile-image {
+  transform: scale(1.03);
+}
+
+.wit-image-caption {
+  background: rgba(26, 54, 93, 0.9);
+  color: white;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wit-caption-icon {
+  font-size: 1.2rem;
+}
+
+/* CTA Styles */
+.wit-cta-wrapper {
   text-align: center;
-  margin-top: 3rem;
+}
+
+.wit-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--pedagogy-primary);
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  box-shadow: 0 5px 15px rgba(26, 54, 93, 0.2);
+}
+
+.wit-cta-button:hover {
+  background: var(--pedagogy-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 134, 171, 0.3);
+}
+
+.wit-button-icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.wit-cta-button:hover .wit-button-icon {
+  transform: rotate(15deg);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (min-width: 768px) {
+  .wit-content-wrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .wit-text-content {
+    flex: 1;
+  }
+
+  .wit-visual-content {
+    flex: 1;
+    order: 2;
+  }
+
+  .wit-main-heading {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wit-section {
+    padding: 8rem 0;
+  }
+
+  .wit-quote {
+    font-size: 1.4rem;
+  }
 }
 
 .cta-button {
