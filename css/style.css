@@ -273,8 +273,8 @@ body {
   padding-top: calc(6rem + 60px); /* 60px = navbar height */
   background: linear-gradient(
     135deg,
-    var(--light) 0%,
-    rgba(242, 250, 255, 0.9) 100%
+    var(--pedagogy-primary) 0%,
+    var(--pedagogy-accent) 100%
   );
   position: relative;
 }
@@ -367,13 +367,16 @@ body {
   ========================================================================== */
 /* ===== HOME PAGE HERO SECTION ===== */
 .home-hero {
-  padding: 7rem 0 3rem; /* Accounts for fixed navbar */
+  padding: 7rem 0 2.5rem; /* Reduced from 6rem/8rem */
   background: linear-gradient(
     135deg,
-    var(--primary) 0%,
-    var(--primary-dark) 100%
+    var(--pedagogy-primary) 0%,
+    var(--pedagogy-accent) 100%
   );
   color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .home-hero .container {
@@ -474,7 +477,7 @@ body {
 }
 
 .is-title-container {
-  background: var(--primary);
+  background: var(--pedagogy-primary);
   padding: 2.5rem 0;
   margin-bottom: 3rem;
   text-align: center;
@@ -1327,7 +1330,7 @@ body {
 
 /* ===== ABOUT HERO SECTION ===== */
 .ah-section {
-  padding: 3.5rem 0 2.5rem; /* Reduced from 6rem/8rem */
+  padding: 7rem 0 3.5rem; /* Reduced from 6rem/8rem */
   background: linear-gradient(
     135deg,
     var(--pedagogy-primary) 0%,
@@ -1625,7 +1628,7 @@ body {
 
 .aq-main-title {
   text-align: center;
-  color: var(--primary);
+  color: var(--pedagogy-primary);
   font-family: "Poppins", sans-serif;
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
@@ -1633,7 +1636,7 @@ body {
 
 .aq-subtitle {
   text-align: center;
-  color: var(--primary-dark);
+  color: var(--primary);
   font-size: 1.1rem;
   margin-bottom: 3.5rem;
 }
@@ -1804,7 +1807,7 @@ body {
 }
 
 .pedagogy-description {
-  color: #555;
+  color: var(--primary);
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
@@ -2161,7 +2164,8 @@ body {
 }
 
 .wit-cta-button:hover {
-  background: var(--pedagogy-accent);
+  background: var(--pedagogy-secondary);
+  color: var(--pedagogy-primary);
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(46, 134, 171, 0.3);
 }
@@ -2205,32 +2209,6 @@ body {
   .wit-quote {
     font-size: 1.4rem;
   }
-}
-
-.cta-button {
-  display: inline-block;
-  background: var(--secondary);
-  color: var(--black);
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(246, 174, 45, 0.3);
-  border: 2px solid transparent;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-button:hover {
-  background: transparent;
-  color: var(--primary-dark);
-  background-color: var(--white);
-  border-color: var(--secondary);
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 6px 20px rgba(246, 174, 45, 0.4);
-  animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
@@ -2284,7 +2262,7 @@ body {
 /* ===== PAGE HERO ===== */
 /* ===== SERVICES HERO SECTION ===== */
 .sh-section {
-  padding: 4rem 0 2.5rem;
+  padding: 7rem 0 3.5rem; /* Reduced from 6rem/8rem */
   background: linear-gradient(
     135deg,
     var(--pedagogy-primary) 0%,
@@ -2843,7 +2821,8 @@ body {
 /* ===== CONTACT HERO SECTION ===== */
 /* ===== CONTACT HERO SECTION ===== */
 .ch-section {
-  padding: 3.5rem 0 2.5rem;
+  padding: 7rem 0 3.5rem; /* Reduced from 6rem/8rem */
+  margin-top: 5rem;
   background: linear-gradient(
     135deg,
     var(--pedagogy-primary) 0%,
