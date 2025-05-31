@@ -668,7 +668,8 @@ body {
   ========================================================================== */
 /* ===== TEACHING METHODOLOGY PREVIEW ===== */
 .teaching-methodology-preview {
-  padding: 5rem 0;
+  padding: 1rem 0;
+  padding-bottom: 2rem;
   background-color: #f8fafc;
 }
 
@@ -826,7 +827,8 @@ body {
   ========================================================================== */
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonial-section {
-  padding: 5rem 0;
+  padding: 1rem 0;
+  padding-bottom: 2rem;
   background-color: white;
 }
 
@@ -974,7 +976,7 @@ body {
   ========================================================================== */
 /* ===== FINAL CTA SECTION ===== */
 .final-cta-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
   background: linear-gradient(
     135deg,
     var(--primary-dark) 0%,
