@@ -1491,7 +1491,7 @@ body {
 /* --- Bio Section --- */
 /* ===== ABOUT BIO SECTION ===== */
 .ab-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background-color: #f8fafc;
 }
 
@@ -1608,7 +1608,7 @@ body {
 
 @media (min-width: 1024px) {
   .ab-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
   }
 
   .ab-text-paragraph {
@@ -1618,7 +1618,7 @@ body {
 
 /* ===== QUALIFICATIONS SECTION ===== */
 .aq-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background-color: white;
 }
 
@@ -1753,7 +1753,7 @@ body {
 
 @media (min-width: 1024px) {
   .aq-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
   }
 
   .aq-single-qualification {
