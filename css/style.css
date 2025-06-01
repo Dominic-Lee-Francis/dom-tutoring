@@ -2404,7 +2404,7 @@ body {
 }
 
 .sp-header-container {
-  background-color: white;
+  background-color: #f8fafc;
   padding: 2.5rem 0;
   margin-bottom: 2rem;
   text-align: center;
@@ -2590,7 +2590,7 @@ body {
 /* ===== FAQ SECTION ===== */
 .fq-section {
   padding: 5rem 0;
-  background-color: #f8fafc;
+  background-color: white;
   position: relative;
 }
 
