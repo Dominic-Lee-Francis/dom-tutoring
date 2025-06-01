@@ -2090,6 +2090,16 @@ body {
   line-height: 1;
 }
 
+.wit-quote-mark-2 {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  color: rgba(212, 175, 55, 0.15);
+  line-height: 1;
+}
+
 .wit-quote {
   font-style: italic;
   color: var(--pedagogy-primary);
