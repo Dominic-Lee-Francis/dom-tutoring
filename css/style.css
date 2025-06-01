@@ -3027,7 +3027,7 @@ body {
 /* ===== CONTACT SECTION ===== */
 /* ===== CONTACT METHODS SECTION ===== */
 .cm-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background-color: #f8fafc;
 }
 
@@ -3143,7 +3143,7 @@ body {
 
 /* Card-specific accent colors */
 .cm-phone {
-  border-top: 4px solid #2ecc71;
+  border-top: 4px solid red;
 }
 
 .cm-whatsapp {
@@ -3171,7 +3171,7 @@ body {
 
 @media (min-width: 1024px) {
   .cm-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
   }
 
   .cm-card {
@@ -3196,7 +3196,7 @@ body {
 /* ===== LOCATION SECTION ===== */
 /* ===== TUTORING LOCATIONS SECTION ===== */
 .tl-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background-color: white;
   position: relative;
 }
@@ -3349,7 +3349,7 @@ body {
 
 @media (min-width: 1024px) {
   .tl-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
   }
 
   .tl-card {
