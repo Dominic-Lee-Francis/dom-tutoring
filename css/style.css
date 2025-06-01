@@ -2166,8 +2166,8 @@ body {
 }
 
 .wit-cta-button:hover {
-  background: var(--pedagogy-secondary);
-  color: var(--pedagogy-primary);
+  background: var(--primary);
+  color: var(--white);
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(46, 134, 171, 0.3);
 }
