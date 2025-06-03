@@ -681,7 +681,7 @@ body {
 
 .tm-main-title {
   text-align: center;
-  color: var(--primary);
+  color: var(--pedagogy-primary);
   font-family: "Poppins", sans-serif;
   font-size: 2.1rem;
   margin-bottom: 0.5rem;
@@ -690,7 +690,7 @@ body {
 
 .tm-subtitle {
   text-align: center;
-  color: var(--primary-dark);
+  color: var(--primary);
   font-size: 1.15rem;
   margin-bottom: 3.5rem;
 }
@@ -840,7 +840,7 @@ body {
 
 .testimonial-main-title {
   text-align: center;
-  color: var(--primary);
+  color: var(--pedagogy-primary);
   font-family: "Poppins", sans-serif;
   font-size: 2.1rem;
   margin-bottom: 0.5rem;
@@ -848,7 +848,7 @@ body {
 
 .testimonial-subtitle {
   text-align: center;
-  color: var(--primary-dark);
+  color: var(--primary);
   font-size: 1.1rem;
   margin-bottom: 3.5rem;
 }
@@ -2434,7 +2434,7 @@ body {
 }
 
 .sp-subtitle {
-  color: var(--pedagogy-primary-dark);
+  color: var(--primary);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
@@ -2633,7 +2633,7 @@ body {
 }
 
 .fq-description {
-  color: #555;
+  color: var(--primary);
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
@@ -3060,7 +3060,7 @@ body {
 }
 
 .cm-intro {
-  color: #555;
+  color: var(--primary);
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
@@ -3230,7 +3230,7 @@ body {
 }
 
 .tl-intro {
-  color: #555;
+  color: var(--primary);
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
