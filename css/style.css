@@ -1388,10 +1388,10 @@ body {
   transition: all 0.3s ease;
 }
 
-.ah-badge:hover {
+/* .ah-badge:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-3px);
-}
+} */
 
 .ah-badge-icon {
   font-size: 1.2rem;
@@ -2334,10 +2334,10 @@ body {
   transition: all 0.3s ease;
 }
 
-.sh-service-badge:hover {
+/* .sh-service-badge:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-3px);
-}
+} */
 
 .sh-badge-icon {
   font-size: 1.1rem;
@@ -2890,10 +2890,10 @@ body {
   transition: all 0.3s ease;
 }
 
-.ch-badge:hover {
+/* .ch-badge:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-3px);
-}
+} */
 
 .ch-badge-icon {
   font-size: 1.2rem;
@@ -3085,10 +3085,10 @@ body {
   overflow: hidden;
 }
 
-.cm-card:hover {
+/* .cm-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .cm-icon {
   font-size: 2.5rem;
@@ -3255,11 +3255,11 @@ body {
   overflow: hidden;
 }
 
-.tl-card:hover {
+/* .tl-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   background: white;
-}
+} */
 
 .tl-icon {
   font-size: 2.5rem;
