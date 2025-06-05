@@ -67,7 +67,6 @@ body {
 
 /* 
   Main Navbar Container 
-  - Fixed to top, full width, with background and shadow.
 */
 .navbar {
   position: fixed;
@@ -82,7 +81,6 @@ body {
 
 /* 
   Navbar Inner Container 
-  - Centers content and aligns logo and navigation.
 */
 .container {
   width: 90%;
@@ -95,7 +93,6 @@ body {
 
 /* 
   Logo Styles 
-  - Brand logo with hover underline animation.
 */
 .logo {
   color: var(--white);
@@ -125,7 +122,6 @@ body {
 
 /* 
   Desktop Navigation Links 
-  - Horizontal navigation for desktop screens.
 */
 .nav-links {
   display: flex;
@@ -161,7 +157,6 @@ body {
 
 /* 
   Hamburger Menu (Mobile) 
-  - Hidden on desktop, shown on mobile for menu toggle.
 */
 .hamburger {
   display: none;
@@ -183,7 +178,6 @@ body {
 
 /* 
   Mobile Menu Drawer 
-  - Slides in from right on mobile, contains vertical nav links.
 */
 .mobile-menu {
   position: fixed;
@@ -223,7 +217,6 @@ body {
 
 /* 
   Responsive Styles for Mobile Devices 
-  - Hamburger menu appears, desktop nav hides, mobile menu slides in.
 */
 @media (max-width: 768px) {
   .hamburger {
@@ -250,7 +243,6 @@ body {
 
 /* 
   Extra Small Devices 
-  - Reduce navbar and logo size for very small screens.
 */
 @media (max-width: 375px) {
   .navbar {
@@ -367,7 +359,7 @@ body {
   ========================================================================== */
 /* ===== HOME PAGE HERO SECTION ===== */
 .home-hero {
-  padding: 7rem 0 2.5rem; /* Reduced from 6rem/8rem */
+  padding: 7rem 0 2.5rem;
   background: linear-gradient(
     135deg,
     var(--pedagogy-primary) 0%,
@@ -397,7 +389,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  transform: translateZ(0); /* Fix for Safari border-radius overflow */
+  transform: translateZ(0);
   padding-top: 20px;
 }
 
@@ -1146,13 +1138,8 @@ body {
   }
 }
 
-/* --- Decorative Elements (Optional) ---
-  Add your own decorative backgrounds or shapes here for the final CTA section.
-*/
+/* ===== FOOTER ===== */
 
-/* ===== FOOTER ===== */
-/* ===== FOOTER ===== */
-/* ===== FOOTER ===== */
 .site-footer {
   background: var(--primary-dark);
   color: white;
@@ -1315,24 +1302,9 @@ body {
 }
 
 /* ===== ABOUT HTML PAGE ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ABOUT PAGE SPECIFIC STYLES ===== */
-
 /* ===== ABOUT HERO SECTION ===== */
 .ah-section {
-  padding: 7rem 0 3.5rem; /* Reduced from 6rem/8rem */
+  padding: 7rem 0 3.5rem;
   background: linear-gradient(
     135deg,
     var(--pedagogy-primary) 0%,
@@ -1367,7 +1339,6 @@ body {
   margin-bottom: 1.8rem;
 }
 
-/* Achievement Badges */
 .ah-badges-container {
   display: flex;
   flex-wrap: wrap;
@@ -1460,21 +1431,20 @@ body {
 /* ===== MOBILE NAVBAR/HERO SPACING FIX ===== */
 @media (max-width: 767px) {
   .ah-section {
-    padding-top: calc(3.5rem + 60px); /* Adjust based on your navbar height */
-    margin-top: -60px; /* Pulls hero up to meet navbar */
+    padding-top: calc(3.5rem + 60px);
+    margin-top: -60px;
   }
 
   /* Ensure content doesn't hide behind fixed navbar */
   .ah-container::before {
     content: "";
     display: block;
-    height: 60px; /* Same as navbar height */
+    height: 60px;
     margin-top: -60px;
     visibility: hidden;
   }
 }
 
-/* Existing hero styles with small adjustment */
 .ah-section {
   padding: 3.5rem 0 2.5rem;
   background: linear-gradient(
@@ -1488,7 +1458,6 @@ body {
   z-index: 1; /* Ensure it stays below navbar */
 }
 
-/* --- Bio Section --- */
 /* ===== ABOUT BIO SECTION ===== */
 .ab-section {
   padding: 2rem 0;
@@ -1762,10 +1731,6 @@ body {
 }
 
 /* ===== TEACHING METHODOLOGY ===== */
-/* ===== TEACHING METHODOLOGY ===== */
-/* ===== TEACHING METHODOLOGY ===== */
-
-/* ===== PREMIUM TEACHING METHODOLOGY ===== */
 .pedagogy-section {
   padding: 6rem 0;
   background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
@@ -1933,7 +1898,6 @@ body {
   top: -0.3rem;
 }
 
-/* Decorative Elements */
 .pedagogy-section::before {
   content: "";
   position: absolute;
@@ -2016,9 +1980,6 @@ body {
   }
 }
 
-/* WHY I TEACH - Specific Styles */
-/* WHY I TEACH - Specific Styles */
-/* ===== WHY I TEACH - Specific Styles ===== */
 /* ===== WHY I TEACH SECTION ===== */
 .wit-section {
   padding: 6rem 0;
@@ -2119,7 +2080,6 @@ body {
   background: var(--pedagogy-secondary);
 }
 
-/* Image Styles */
 .wit-visual-content {
   order: -1;
 }
@@ -2248,33 +2208,19 @@ body {
     font-size: 0.95rem;
   }
   .cta-button:hover {
-    animation: none; /* Disable pulse on mobile if preferred */
+    animation: none;
     transform: translateY(-2px);
   }
 }
 
 /* ===== SERVICES PAGE ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== SERVICES PAGE ===== */
 .services-page {
   padding-top: 80px; /* Account for fixed navbar */
 }
 
-/* ===== PAGE HERO ===== */
 /* ===== SERVICES HERO SECTION ===== */
 .sh-section {
-  padding: 7rem 0 3.5rem; /* Reduced from 6rem/8rem */
+  padding: 7rem 0 3.5rem;
   background: linear-gradient(
     135deg,
     var(--pedagogy-primary) 0%,
@@ -2405,7 +2351,6 @@ body {
   }
 }
 
-/* ===== SERVICE PACKAGES SECTION ===== */
 /* ===== SERVICES PACKAGES SECTION ===== */
 .sp-section {
   padding: 5rem 0;
@@ -2597,7 +2542,6 @@ body {
 }
 
 /* ===== FAQ SECTION ===== */
-/* ===== FAQ SECTION ===== */
 .fq-section {
   padding: 5rem 0;
   background-color: white;
@@ -2640,7 +2584,6 @@ body {
   line-height: 1.6;
 }
 
-/* Accordion Styles */
 .fq-accordion {
   max-width: 800px;
   margin: 0 auto 3rem;
@@ -2734,7 +2677,6 @@ body {
   top: -0.3rem;
 }
 
-/* CTA Styles */
 .fq-cta {
   text-align: center;
   margin-top: 3rem;
@@ -2814,26 +2756,10 @@ body {
 }
 
 /* ===== CONTACT PAGE ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== ... ===== */
-/* ===== CONTACT PAGE ===== */
 
-/* ===== CONTACT PAGE HERO ===== */
-/* ===== CONTACT HERO SECTION ===== */
 /* ===== CONTACT HERO SECTION ===== */
 .ch-section {
-  padding: 7rem 0 3.5rem; /* Reduced from 6rem/8rem */
+  padding: 7rem 0 3.5rem;
   margin-top: 5rem;
   background: linear-gradient(
     135deg,
@@ -2869,7 +2795,6 @@ body {
   margin: 0 auto 1.8rem;
 }
 
-/* Contact Method Badges */
 .ch-badges-container {
   display: flex;
   flex-wrap: wrap;
@@ -2904,7 +2829,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Decorative Elements */
 .ch-section::before {
   content: "";
   position: absolute;
@@ -3003,18 +2927,17 @@ body {
   }
 }
 
-/* ===== NAVBAR SPACING FIX (IMPROVED VERSION) ===== */
+/* ===== NAVBAR SPACING FIX  ===== */
 @media (max-width: 767px) {
   .ch-section {
-    padding-top: calc(3.5rem + 65px); /* Slightly larger for 425px devices */
+    padding-top: calc(3.5rem + 65px);
     margin-top: -65px;
   }
 
-  /* Ensure content doesn't hide behind fixed navbar */
   .ch-container::before {
     content: "";
     display: block;
-    height: 65px; /* Slightly taller to prevent overlap */
+    height: 65px;
     margin-top: -65px;
     visibility: hidden;
   }
@@ -3032,9 +2955,7 @@ body {
     margin-top: -68px;
   }
 }
-/* ===== CONTACT SECTION ===== */
-/* ===== CONTACT SECTION ===== */
-/* ===== CONTACT SECTION ===== */
+
 /* ===== CONTACT METHODS SECTION ===== */
 .cm-section {
   padding: 2rem 0;
@@ -3135,7 +3056,6 @@ body {
   transform: translateX(3px);
 }
 
-/* WhatsApp-specific styles */
 .cm-details {
   margin-top: 1.5rem;
 }
@@ -3151,7 +3071,6 @@ body {
   font-weight: 600;
 }
 
-/* Card-specific accent colors */
 .cm-phone {
   border-top: 4px solid red;
 }
@@ -3203,7 +3122,7 @@ body {
     font-size: 1rem;
   }
 }
-/* ===== LOCATION SECTION ===== */
+
 /* ===== TUTORING LOCATIONS SECTION ===== */
 .tl-section {
   padding: 2rem 0;
@@ -3316,16 +3235,14 @@ body {
   font-style: italic;
 }
 
-/* Card-specific accents */
 .tl-home {
-  border-top: 4px solid #e74c3c; /* Red accent for home visits */
+  border-top: 4px solid #e74c3c;
 }
 
 .tl-online {
-  border-top: 4px solid #3498db; /* Blue accent for online */
+  border-top: 4px solid #3498db;
 }
 
-/* Decorative elements */
 .tl-card::after {
   content: "";
   position: absolute;
