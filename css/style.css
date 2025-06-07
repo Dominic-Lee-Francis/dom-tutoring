@@ -1304,7 +1304,7 @@ body {
 /* ===== ABOUT HTML PAGE ===== */
 /* ===== ABOUT HERO SECTION ===== */
 .ah-section {
-  padding: 7rem 0 3.5rem;
+  padding: 9rem 0 3.5rem;
   background: linear-gradient(
     135deg,
     var(--pedagogy-primary) 0%,
@@ -1391,7 +1391,7 @@ body {
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (min-width: 768px) {
   .ah-section {
-    padding-top: calc(4rem + 60px);
+    padding-top: 7rem;
     margin-top: -60px;
   }
 
@@ -1415,7 +1415,8 @@ body {
 
 @media (max-width: 480px) {
   .ah-section {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
+    margin-top: -30px;
   }
   .ah-badges-container {
     flex-direction: column;
@@ -1431,11 +1432,6 @@ body {
 
 /* ===== MOBILE NAVBAR/HERO SPACING FIX ===== */
 @media (max-width: 767px) {
-  .ah-section {
-    padding-top: calc(3.5rem + 60px);
-    margin-top: -60px;
-  }
-
   /* Ensure content doesn't hide behind fixed navbar */
   .ah-container::before {
     content: "";
@@ -1444,19 +1440,6 @@ body {
     margin-top: -60px;
     visibility: hidden;
   }
-}
-
-.ah-section {
-  padding: 3.5rem 0 2.5rem;
-  background: linear-gradient(
-    135deg,
-    var(--pedagogy-primary) 0%,
-    var(--pedagogy-accent) 100%
-  );
-  color: white;
-  text-align: center;
-  position: relative;
-  z-index: 1; /* Ensure it stays below navbar */
 }
 
 /* ===== ABOUT BIO SECTION ===== */
@@ -2847,8 +2830,7 @@ body {
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (min-width: 768px) {
   .ch-section {
-    padding-top: calc(4rem + 60px);
-    margin-top: -60px;
+    padding-top: 7rem;
   }
 
   .ch-main-title {
