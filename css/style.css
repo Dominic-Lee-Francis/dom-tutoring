@@ -1391,7 +1391,7 @@ body {
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (min-width: 768px) {
   .ah-section {
-    padding-top: 7rem;
+    padding-top: 8rem;
     margin-top: -60px;
   }
 
@@ -1419,7 +1419,7 @@ body {
   .ah-container::before {
     content: "";
     display: block;
-    height: 60px;
+    height: 70px;
     margin-top: -60px;
     visibility: hidden;
   }
@@ -2834,6 +2834,23 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .ch-section {
+    padding: 8rem 0;
+    padding-top: 9rem;
+  }
+  .ch-badges-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ch-badge {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+}
+
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 767px) {
   /* Navbar spacing fix */
@@ -2864,7 +2881,7 @@ body {
 
 @media (min-width: 768px) {
   .ch-section {
-    padding: 5rem 0 3rem;
+    padding: 8rem 0 3rem;
   }
 
   .ch-main-title {
@@ -2879,7 +2896,7 @@ body {
 /* ===== NAVBAR SPACING FIX  ===== */
 @media (max-width: 767px) {
   .ch-section {
-    padding-top: calc(3.5rem + 65px);
+    padding-top: 8rem;
     margin-top: -65px;
   }
 
@@ -2889,19 +2906,6 @@ body {
     height: 65px;
     margin-top: -65px;
     visibility: hidden;
-  }
-}
-
-/* Extra adjustment specifically for 425px devices */
-@media (min-width: 425px) and (max-width: 767px) {
-  .ch-section {
-    padding-top: calc(3.5rem + 68px);
-    margin-top: 6px;
-    padding-top: 6rem;
-  }
-  .ch-container::before {
-    height: 68px;
-    margin-top: -68px;
   }
 }
 
