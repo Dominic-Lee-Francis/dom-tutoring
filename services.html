@@ -11,6 +11,33 @@
       content="Dominic is a professional private tutor for students in Hong Kong. Personalised lessons in English by a Native English Speaker."
     />
 
+    <!-- Language and Region -->
+    <meta name="geo.region" content="HK" />
+    <meta name="geo.placename" content="Hong Kong" />
+    <meta name="language" content="en-HK" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Tutoring Service",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "Dominic's English & Coding Tutoring"
+        },
+        "description": "English and coding tutoring services for primary students in Hong Kong",
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "22.3193",
+            "longitude": "114.1694"
+          },
+          "geoRadius": "15000"
+        }
+      }
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -464,9 +491,9 @@
             <nav class="footer-nav">
               <h4>Explore</h4>
               <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/services">Programmes</a></li>
-                <li><a href="/about">My Story</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/services.html">Programmes</a></li>
+                <li><a href="/about.html">My Story</a></li>
               </ul>
             </nav>
 
