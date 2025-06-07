@@ -1304,7 +1304,7 @@ body {
 /* ===== ABOUT HTML PAGE ===== */
 /* ===== ABOUT HERO SECTION ===== */
 .ah-section {
-  padding: 9rem 0 3.5rem;
+  padding: 7rem 0 3.5rem;
   background: linear-gradient(
     135deg,
     var(--pedagogy-primary) 0%,
@@ -1391,7 +1391,7 @@ body {
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (min-width: 768px) {
   .ah-section {
-    padding-top: 8rem;
+    padding-top: 7rem;
     margin-top: -60px;
   }
 
@@ -1419,7 +1419,7 @@ body {
   .ah-container::before {
     content: "";
     display: block;
-    height: 70px;
+    height: 60px;
     margin-top: -60px;
     visibility: hidden;
   }
@@ -2881,7 +2881,7 @@ body {
 
 @media (min-width: 768px) {
   .ch-section {
-    padding: 8rem 0 3rem;
+    padding: 5rem 0 3rem;
   }
 
   .ch-main-title {
@@ -2896,7 +2896,7 @@ body {
 /* ===== NAVBAR SPACING FIX  ===== */
 @media (max-width: 767px) {
   .ch-section {
-    padding-top: 8rem;
+    padding-top: calc(7rem + 65px);
     margin-top: -65px;
   }
 
