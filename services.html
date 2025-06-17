@@ -2,38 +2,137 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <meta name="theme-color" content="#2B7AFF" />
+
+    <!-- SEO Meta Tags -->
+    <link rel="canonical" href="https://www.dominicstutoring.com/services" />
+
     <meta
       name="description"
-      content="Dominic is a professional private tutor for students in Hong Kong. Personalised lessons in English by a Native English Speaker."
+      content="Programmes. British-native tutor in Hong Kong offering personalised English lessons (reading, exam preparation, writing, grammar, creative writing) and fun coding classes (Scratch/Python). 7+ years experience as a HK school teacher. Book a free trial today!"
+    />
+
+    <meta
+      name="keywords"
+      content="British English tutor Hong Kong, Cambridge exam prep tutor, English exam prep tutor, coding for kids HK, Scratch programming lessons, Python for beginners, phonics tutoring, grammar tutoring, native English teacher HK, primary school English help, kindergarten reading tutor, Hong Kong homeschooling, speech competition training, STEM tutor Hong Kong, online English classes, in-person coding tutor Kowloon"
     />
 
     <!-- Language and Region -->
     <meta name="geo.region" content="HK" />
     <meta name="geo.placename" content="Hong Kong" />
     <meta name="language" content="en-HK" />
+    <meta http-equiv="content-language" content="en-HK" />
 
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:title"
+      content="Dominic's English & Coding Tutoring | Hong Kong | Programmes"
+    />
+    <meta
+      property="og:description"
+      content="Programmes. British-native private tutor in Hong Kong: English (grammar, writing, reading, exam prep) and coding (Scratch/Python). 7+ years experience. Book a free trial."
+    />
+    <meta
+      name="twitter:description"
+      content="Programmes. UK English & coding tutor for HK students. Cambridge exam prep, creative writing, and fun coding projects. Free trial available."
+    />
+    <meta
+      property="og:image"
+      content="https://www.dominicstutoring.com/images/domHome.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://www.dominicstutoring.com/services"
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dominic's English & Coding Tutoring" />
+    <meta
+      name="twitter:image"
+      content="https://www.dominicstutoring.com/images/domHome.jpg"
+    />
+
+    <!-- Schema.org for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Dominic's English & Coding Tutoring",
+        "description": "Professional English and coding tutor for students in Hong Kong",
+        "url": "https://www.dominicstutoring.com/services",
+        "telephone": "+85294129115",
+        "email": "dominicstutoring@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hong Kong",
+          "addressRegion": "HK"
+        },
+
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      }
+    </script>
+
+    <!-- Person Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dominic Francis",
+        "jobTitle": "English & Coding Tutor",
+        "image": "https://www.dominicstutoring.com/images/domHome.jpg",
+        "url": "https://www.dominicstutoring.com"
+      }
+    </script>
+
+    <!-- Service Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Service",
-        "serviceType": "Tutoring Service",
+        "serviceType": "Tutoring",
         "provider": {
-          "@type": "EducationalOrganization",
-          "name": "Dominic's English & Coding Tutoring"
+          "@type": "Person",
+          "name": "Dominic Francis"
         },
-        "description": "English and coding tutoring services for primary students in Hong Kong",
-        "areaServed": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": "22.3193",
-            "longitude": "114.1694"
-          },
-          "geoRadius": "15000"
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Tutoring Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "English Language Tutoring",
+                "description": "Begin journey in English, advance skills, or exam preparation."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Coding for Kids",
+                "description": "Beginner-friendly coding classes."
+              }
+            }
+          ]
         }
       }
     </script>
@@ -56,6 +155,12 @@
     />
 
     <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/webp"
+      sizes="192x192"
+      href="/favicon-192x192.webp"
+    />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -65,7 +170,21 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Dominic's English & Coding Tutoring | Hong Kong | Programmes</title>
+
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap"
+    /></noscript>
+    <link rel="preload" href="css/style.css" as="style" />
   </head>
+
   <body>
     <!-- NAVBAR -->
     <header class="navbar">
@@ -85,7 +204,7 @@
         <!-- Desktop Navigation -->
         <nav class="nav-links">
           <a href="index.html" class="nav-link active">Home</a>
-          <a href="about.html" class="nav-link">About Me</a>
+          <a href="about.html" class="nav-link">My Story</a>
           <a href="services.html" class="nav-link">Programmes</a>
           <a href="contact.html" class="nav-link">Book Now</a>
         </nav>
@@ -95,7 +214,7 @@
       <div class="mobile-menu">
         <nav>
           <a href="index.html" class="mobile-nav-link active">Home</a>
-          <a href="about.html" class="mobile-nav-link">About Me</a>
+          <a href="about.html" class="mobile-nav-link">My Story</a>
           <a href="services.html" class="mobile-nav-link">Programmes</a>
           <a href="contact.html" class="mobile-nav-link">Book Now</a>
         </nav>
@@ -524,7 +643,7 @@
                       class="fa-regular fa-envelope"
                       style="color: #ffffff"
                     ></i>
-                    Email</a
+                    dominicstutoring@gmail.com</a
                   >
                 </li>
               </ul>
