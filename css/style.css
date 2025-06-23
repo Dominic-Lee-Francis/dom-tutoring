@@ -418,6 +418,12 @@ body {
   line-height: 1.6;
 }
 
+.hero-subtitle-2 {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
 /* --- Pulse Animation for Hero Elements --- */
 @keyframes pulse {
   0% {
