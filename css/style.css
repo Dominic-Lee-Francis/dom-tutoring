@@ -28,6 +28,8 @@
   --pedagogy-light: #f8f9fa;
   --pedagogy-dark: #212529;
   --pedagogy-muted: #6c757d;
+
+  color-scheme: light;
 }
 
 /* ==========================================================================
@@ -1227,7 +1229,8 @@ body {
 .footer-nav a,
 .footer-phone,
 .footer-whatsapp,
-.footer-email {
+.footer-email,
+.footer-linkedin {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   transition: color 0.3s;
