@@ -1240,7 +1240,8 @@ body {
 .footer-nav a:hover,
 .footer-phone:hover,
 .footer-whatsapp:hover,
-.footer-email:hover {
+.footer-email:hover,
+.footer-linkedin:hover {
   color: var(--secondary);
 }
 
